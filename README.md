@@ -42,7 +42,29 @@ a plausible wrong analysis must fail.
 
 12 tasks, 72 scripted controls (56 that must pass, 16 that must fail), all behaving as
 expected under both graders, and 18 statements of the papers recomputed from their public
-files. None of it has been reviewed by a person yet, and no model has been run on the tasks.
+files. None of it has been reviewed by a person yet.
+
+## Agent runs
+
+Each of 3 Claude models (Haiku 5.5, Sonnet 5.5 and Opus 5.5) ran every task once, as a fresh
+agent working in a folder that held only the task text and its input files (24 Nov 2026):
+
+| Paper | Haiku | Sonnet | Opus |
+|---|---|---|---|
+| AVE migration | 2 of 4 | 4 of 4 | 4 of 4 |
+| Cell competition | 2 of 4 | 4 of 4 | 4 of 4 |
+| APOE microglia | 2 of 4 | 3 of 4 | 4 of 4 |
+| All 12 tasks | 6 | 11 | 12 |
+
+The wrong answers are the ones the traps were built for: Haiku compared bootstrap PCA signs
+without aligning the axes, filtered away the cells the study is about, and took too broad a
+background for an enrichment test; Sonnet kept the 2 knockout grafts that still express APOE.
+Both graders agree on all 36 verdicts. An audit of every tool call found no web use and no
+reads outside the run folders, apart from the shell's own background output files.
+
+Limits: 1 run per model and task; the tasks were written with Opus 5.5, which may favour
+analyses in its own style; the papers are public, so a model may recall them. Every run, its
+answer, what it missed and its audit: [results/agent_runs/2026-11-24/RESULTS.md](results/agent_runs/2026-11-24/RESULTS.md).
 
 Each paper's folder has the full table: what the reference analysis finds, the trap,
 and where the trap lands against the grader's window. Prompts, keys and notes are in

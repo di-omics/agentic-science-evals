@@ -1,0 +1,3533 @@
+{
+ "latch_eval_tools": "0.4.54",
+ "runs": [
+  {
+   "model": "haiku",
+   "paper": "apoe_microglia",
+   "task": "apoe01_failed_knockouts",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": false,
+   "latch_passed": false,
+   "answer_source": "final message",
+   "answer": {
+    "n_deg": 9,
+    "n_higher_in_ko": 4,
+    "apoe_log2fc": -2.133823
+   },
+   "fields": {
+    "n_deg": {
+     "value": 9,
+     "window": [
+      293,
+      413
+     ],
+     "ok": false,
+     "gap": 284
+    },
+    "n_higher_in_ko": {
+     "value": 4,
+     "window": [
+      108,
+      168
+     ],
+     "ok": false,
+     "gap": 104
+    },
+    "apoe_log2fc": {
+     "value": -2.133823,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": false,
+     "gap": 1.543177
+    }
+   },
+   "tool_calls": 10,
+   "seconds": 358,
+   "usage": {
+    "input_tokens": 38,
+    "output_tokens": 21743,
+    "cache_read_input_tokens": 1234802,
+    "cache_creation_input_tokens": 74281
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": [
+     "P=$(<agent-env>/bin/python -I -c \"import pydeseq2,os;print(os.path.dirname(pydeseq2.__file__))\"); grep -rn -i \"normalization\\|offset\" \"$P\" | grep -v \"^Binary\" | head -40"
+    ]
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "apoe_microglia",
+   "task": "apoe01_failed_knockouts",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_deg": 338,
+    "n_higher_in_ko": 133,
+    "apoe_log2fc": -4.0771
+   },
+   "fields": {
+    "n_deg": {
+     "value": 338,
+     "window": [
+      293,
+      413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_ko": {
+     "value": 133,
+     "window": [
+      108,
+      168
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -4.0771,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 14,
+   "seconds": 1121,
+   "usage": {
+    "input_tokens": 58,
+    "output_tokens": 241200,
+    "cache_read_input_tokens": 3293330,
+    "cache_creation_input_tokens": 275020
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "apoe_microglia",
+   "task": "apoe01_failed_knockouts",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": false,
+   "latch_passed": false,
+   "answer_source": "final message",
+   "answer": {
+    "n_deg": 455,
+    "n_higher_in_ko": 212,
+    "apoe_log2fc": -2.130141
+   },
+   "fields": {
+    "n_deg": {
+     "value": 455,
+     "window": [
+      293,
+      413
+     ],
+     "ok": false,
+     "gap": 42
+    },
+    "n_higher_in_ko": {
+     "value": 212,
+     "window": [
+      108,
+      168
+     ],
+     "ok": false,
+     "gap": 44
+    },
+    "apoe_log2fc": {
+     "value": -2.130141,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": false,
+     "gap": 1.546859
+    }
+   },
+   "tool_calls": 4,
+   "seconds": 109,
+   "usage": {
+    "input_tokens": 14,
+    "output_tokens": 3498,
+    "cache_read_input_tokens": 404477,
+    "cache_creation_input_tokens": 30177
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "apoe_microglia",
+   "task": "apoe02_transcript_length_offsets",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": false,
+   "latch_passed": false,
+   "answer_source": "final message",
+   "answer": {
+    "n_deg": 521,
+    "n_higher_in_apoe4": 281,
+    "apoe_log2fc": -0.462398
+   },
+   "fields": {
+    "n_deg": {
+     "value": 521,
+     "window": [
+      220,
+      360
+     ],
+     "ok": false,
+     "gap": 161
+    },
+    "n_higher_in_apoe4": {
+     "value": 281,
+     "window": [
+      123,
+      203
+     ],
+     "ok": false,
+     "gap": 78
+    },
+    "apoe_log2fc": {
+     "value": -0.462398,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 21,
+   "seconds": 948,
+   "usage": {
+    "input_tokens": 72,
+    "output_tokens": 37351,
+    "cache_read_input_tokens": 2685917,
+    "cache_creation_input_tokens": 97795
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [
+     "<harness>/bj9hd4h4b.output",
+     "<harness>/bmnntcwr1.output"
+    ],
+    "commands_without_folder": [
+     "sleep 100; cat <harness>/bj9hd4h4b.output",
+     "until [ -s <harness>/bj9hd4h4b.output ]; do sleep 5; done; cat <tmp>",
+     "until [ -s <harness>/bmnntcwr1.output ]; do sleep 5; done; cat <tmp>"
+    ]
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "apoe_microglia",
+   "task": "apoe02_transcript_length_offsets",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_deg": 270,
+    "n_higher_in_apoe4": 153,
+    "apoe_log2fc": -0.4634
+   },
+   "fields": {
+    "n_deg": {
+     "value": 270,
+     "window": [
+      220,
+      360
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_apoe4": {
+     "value": 153,
+     "window": [
+      123,
+      203
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -0.4634,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 15,
+   "seconds": 1033,
+   "usage": {
+    "input_tokens": 76,
+    "output_tokens": 276952,
+    "cache_read_input_tokens": 4500097,
+    "cache_creation_input_tokens": 306126
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "apoe_microglia",
+   "task": "apoe02_transcript_length_offsets",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_deg": 286,
+    "n_higher_in_apoe4": 161,
+    "apoe_log2fc": -0.4634376748223499
+   },
+   "fields": {
+    "n_deg": {
+     "value": 286,
+     "window": [
+      220,
+      360
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_apoe4": {
+     "value": 161,
+     "window": [
+      123,
+      203
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -0.4634376748223499,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 7,
+   "seconds": 221,
+   "usage": {
+    "input_tokens": 24,
+    "output_tokens": 15917,
+    "cache_read_input_tokens": 752953,
+    "cache_creation_input_tokens": 46940
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [
+     "<harness>/b08pfx5pn.output"
+    ],
+    "commands_without_folder": [
+     "sleep 100; cat <harness>/b08pfx5pn.output | grep -v Warn | grep -v \"glm=\""
+    ]
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "apoe_microglia",
+   "task": "apoe03_vdr_targets_direction",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_higher_in_apoe2": 890,
+    "n_vdr_targets": 82,
+    "vdr_targets_higher_in_apoe2": [
+     "ABCC1",
+     "ACO2",
+     "ADAMTS10",
+     "ADGRE5",
+     "ARHGEF10L",
+     "BCL9L",
+     "CHCHD10",
+     "CMTM7",
+     "COX4I1",
+     "CSF3R",
+     "CTSB",
+     "CTSD",
+     "DNAJC4",
+     "DNASE2",
+     "EFNB1",
+     "ELL",
+     "EPB41L1",
+     "FAM20C",
+     "FAM53B",
+     "FGFR1",
+     "FTL",
+     "FUCA1",
+     "GIPC3",
+     "GLIPR1",
+     "GM2A",
+     "GNPDA1",
+     "GPI",
+     "HBEGF",
+     "HIGD2A",
+     "HPCAL1",
+     "IFNGR2",
+     "ITGB2",
+     "KLF11",
+     "LAMC1",
+     "LAMP1",
+     "LGALS9",
+     "LGI2",
+     "LILRB4",
+     "LRCH4",
+     "MARCO",
+     "MDH2",
+     "MFSD12",
+     "MGLL",
+     "MRPL4",
+     "MYO1F",
+     "MYO9B",
+     "NCF2",
+     "NCF4",
+     "NCOR2",
+     "NDUFS7",
+     "NFAM1",
+     "NFKBIA",
+     "NHSL2",
+     "NINJ1",
+     "PABPC1",
+     "PIEZO1",
+     "PILRA",
+     "PLTP",
+     "PRKACA",
+     "RBM47",
+     "RIN2",
+     "RIN3",
+     "SASH3",
+     "SCARB1",
+     "SEMA4B",
+     "SHE",
+     "SIPA1",
+     "SLC27A1",
+     "SLC37A2",
+     "SMAP2",
+     "SMPDL3A",
+     "TEX264",
+     "THBD",
+     "THEMIS2",
+     "TMC6",
+     "TMEM127",
+     "TMEM205",
+     "UAP1L1",
+     "VRK3",
+     "XXYLT1",
+     "XYLT1",
+     "ZMIZ1"
+    ],
+    "neglog10_p": 10.443054248228288
+   },
+   "fields": {
+    "n_higher_in_apoe2": {
+     "value": 890,
+     "window": [
+      875,
+      905
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_vdr_targets": {
+     "value": 82,
+     "window": [
+      79,
+      85
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neglog10_p": {
+     "value": 10.443054248228288,
+     "window": [
+      7.9399999999999995,
+      11.44
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "vdr_targets_higher_in_apoe2": {
+     "jaccard": 1.0,
+     "threshold": 0.9,
+     "ok": true
+    }
+   },
+   "tool_calls": 5,
+   "seconds": 49,
+   "usage": {
+    "input_tokens": 20,
+    "output_tokens": 8274,
+    "cache_read_input_tokens": 567383,
+    "cache_creation_input_tokens": 52608
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "apoe_microglia",
+   "task": "apoe03_vdr_targets_direction",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_higher_in_apoe2": 890,
+    "n_vdr_targets": 82,
+    "vdr_targets_higher_in_apoe2": [
+     "ABCC1",
+     "ACO2",
+     "ADAMTS10",
+     "ADGRE5",
+     "ARHGEF10L",
+     "BCL9L",
+     "CHCHD10",
+     "CMTM7",
+     "COX4I1",
+     "CSF3R",
+     "CTSB",
+     "CTSD",
+     "DNAJC4",
+     "DNASE2",
+     "EFNB1",
+     "ELL",
+     "EPB41L1",
+     "FAM20C",
+     "FAM53B",
+     "FGFR1",
+     "FTL",
+     "FUCA1",
+     "GIPC3",
+     "GLIPR1",
+     "GM2A",
+     "GNPDA1",
+     "GPI",
+     "HBEGF",
+     "HIGD2A",
+     "HPCAL1",
+     "IFNGR2",
+     "ITGB2",
+     "KLF11",
+     "LAMC1",
+     "LAMP1",
+     "LGALS9",
+     "LGI2",
+     "LILRB4",
+     "LRCH4",
+     "MARCO",
+     "MDH2",
+     "MFSD12",
+     "MGLL",
+     "MRPL4",
+     "MYO1F",
+     "MYO9B",
+     "NCF2",
+     "NCF4",
+     "NCOR2",
+     "NDUFS7",
+     "NFAM1",
+     "NFKBIA",
+     "NHSL2",
+     "NINJ1",
+     "PABPC1",
+     "PIEZO1",
+     "PILRA",
+     "PLTP",
+     "PRKACA",
+     "RBM47",
+     "RIN2",
+     "RIN3",
+     "SASH3",
+     "SCARB1",
+     "SEMA4B",
+     "SHE",
+     "SIPA1",
+     "SLC27A1",
+     "SLC37A2",
+     "SMAP2",
+     "SMPDL3A",
+     "TEX264",
+     "THBD",
+     "THEMIS2",
+     "TMC6",
+     "TMEM127",
+     "TMEM205",
+     "UAP1L1",
+     "VRK3",
+     "XXYLT1",
+     "XYLT1",
+     "ZMIZ1"
+    ],
+    "neglog10_p": 10.4431
+   },
+   "fields": {
+    "n_higher_in_apoe2": {
+     "value": 890,
+     "window": [
+      875,
+      905
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_vdr_targets": {
+     "value": 82,
+     "window": [
+      79,
+      85
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neglog10_p": {
+     "value": 10.4431,
+     "window": [
+      7.9399999999999995,
+      11.44
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "vdr_targets_higher_in_apoe2": {
+     "jaccard": 1.0,
+     "threshold": 0.9,
+     "ok": true
+    }
+   },
+   "tool_calls": 5,
+   "seconds": 132,
+   "usage": {
+    "input_tokens": 24,
+    "output_tokens": 20318,
+    "cache_read_input_tokens": 708490,
+    "cache_creation_input_tokens": 77636
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "apoe_microglia",
+   "task": "apoe03_vdr_targets_direction",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_higher_in_apoe2": 890,
+    "n_vdr_targets": 82,
+    "vdr_targets_higher_in_apoe2": [
+     "ABCC1",
+     "ACO2",
+     "ADAMTS10",
+     "ADGRE5",
+     "ARHGEF10L",
+     "BCL9L",
+     "CHCHD10",
+     "CMTM7",
+     "COX4I1",
+     "CSF3R",
+     "CTSB",
+     "CTSD",
+     "DNAJC4",
+     "DNASE2",
+     "EFNB1",
+     "ELL",
+     "EPB41L1",
+     "FAM20C",
+     "FAM53B",
+     "FGFR1",
+     "FTL",
+     "FUCA1",
+     "GIPC3",
+     "GLIPR1",
+     "GM2A",
+     "GNPDA1",
+     "GPI",
+     "HBEGF",
+     "HIGD2A",
+     "HPCAL1",
+     "IFNGR2",
+     "ITGB2",
+     "KLF11",
+     "LAMC1",
+     "LAMP1",
+     "LGALS9",
+     "LGI2",
+     "LILRB4",
+     "LRCH4",
+     "MARCO",
+     "MDH2",
+     "MFSD12",
+     "MGLL",
+     "MRPL4",
+     "MYO1F",
+     "MYO9B",
+     "NCF2",
+     "NCF4",
+     "NCOR2",
+     "NDUFS7",
+     "NFAM1",
+     "NFKBIA",
+     "NHSL2",
+     "NINJ1",
+     "PABPC1",
+     "PIEZO1",
+     "PILRA",
+     "PLTP",
+     "PRKACA",
+     "RBM47",
+     "RIN2",
+     "RIN3",
+     "SASH3",
+     "SCARB1",
+     "SEMA4B",
+     "SHE",
+     "SIPA1",
+     "SLC27A1",
+     "SLC37A2",
+     "SMAP2",
+     "SMPDL3A",
+     "TEX264",
+     "THBD",
+     "THEMIS2",
+     "TMC6",
+     "TMEM127",
+     "TMEM205",
+     "UAP1L1",
+     "VRK3",
+     "XXYLT1",
+     "XYLT1",
+     "ZMIZ1"
+    ],
+    "neglog10_p": 10.443054248228288
+   },
+   "fields": {
+    "n_higher_in_apoe2": {
+     "value": 890,
+     "window": [
+      875,
+      905
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_vdr_targets": {
+     "value": 82,
+     "window": [
+      79,
+      85
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neglog10_p": {
+     "value": 10.443054248228288,
+     "window": [
+      7.9399999999999995,
+      11.44
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "vdr_targets_higher_in_apoe2": {
+     "jaccard": 1.0,
+     "threshold": 0.9,
+     "ok": true
+    }
+   },
+   "tool_calls": 3,
+   "seconds": 64,
+   "usage": {
+    "input_tokens": 12,
+    "output_tokens": 4255,
+    "cache_read_input_tokens": 337395,
+    "cache_creation_input_tokens": 29134
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "apoe_microglia",
+   "task": "apoe04_matched_contrast_concordance",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "r_e2_vs_e3": 0.43510185950294256,
+    "r_e4_vs_e3": 0.6398220585988901,
+    "r_e4_vs_e2": 0.4458000770499416,
+    "r_ko_vs_e3": 0.6272894675426482,
+    "n_e2_vs_e3": 444,
+    "n_e4_vs_e3": 308,
+    "n_e4_vs_e2": 1548,
+    "n_ko_vs_e3": 316
+   },
+   "fields": {
+    "r_e2_vs_e3": {
+     "value": 0.43510185950294256,
+     "window": [
+      0.4001,
+      0.47009999999999996
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e3": {
+     "value": 0.6398220585988901,
+     "window": [
+      0.6048,
+      0.6748000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e2": {
+     "value": 0.4458000770499416,
+     "window": [
+      0.41079999999999994,
+      0.4808
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_ko_vs_e3": {
+     "value": 0.6272894675426482,
+     "window": [
+      0.5922999999999999,
+      0.6623
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e2_vs_e3": {
+     "value": 444,
+     "window": [
+      434,
+      454
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e3": {
+     "value": 308,
+     "window": [
+      298,
+      318
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e2": {
+     "value": 1548,
+     "window": [
+      1533,
+      1563
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ko_vs_e3": {
+     "value": 316,
+     "window": [
+      306,
+      326
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 3,
+   "seconds": 49,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 5950,
+    "cache_read_input_tokens": 438084,
+    "cache_creation_input_tokens": 57080
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "apoe_microglia",
+   "task": "apoe04_matched_contrast_concordance",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "r_e2_vs_e3": 0.43510185950294256,
+    "r_e4_vs_e3": 0.6398220585988901,
+    "r_e4_vs_e2": 0.4458000770499416,
+    "r_ko_vs_e3": 0.6272894675426482,
+    "n_e2_vs_e3": 444,
+    "n_e4_vs_e3": 308,
+    "n_e4_vs_e2": 1548,
+    "n_ko_vs_e3": 316
+   },
+   "fields": {
+    "r_e2_vs_e3": {
+     "value": 0.43510185950294256,
+     "window": [
+      0.4001,
+      0.47009999999999996
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e3": {
+     "value": 0.6398220585988901,
+     "window": [
+      0.6048,
+      0.6748000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e2": {
+     "value": 0.4458000770499416,
+     "window": [
+      0.41079999999999994,
+      0.4808
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_ko_vs_e3": {
+     "value": 0.6272894675426482,
+     "window": [
+      0.5922999999999999,
+      0.6623
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e2_vs_e3": {
+     "value": 444,
+     "window": [
+      434,
+      454
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e3": {
+     "value": 308,
+     "window": [
+      298,
+      318
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e2": {
+     "value": 1548,
+     "window": [
+      1533,
+      1563
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ko_vs_e3": {
+     "value": 316,
+     "window": [
+      306,
+      326
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 10,
+   "seconds": 194,
+   "usage": {
+    "input_tokens": 44,
+    "output_tokens": 24376,
+    "cache_read_input_tokens": 1436488,
+    "cache_creation_input_tokens": 84848
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "apoe_microglia",
+   "task": "apoe04_matched_contrast_concordance",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "r_e2_vs_e3": 0.43510185950294245,
+    "r_e4_vs_e3": 0.6398220585988901,
+    "r_e4_vs_e2": 0.4458000770499418,
+    "r_ko_vs_e3": 0.6272894675426484,
+    "n_e2_vs_e3": 444,
+    "n_e4_vs_e3": 308,
+    "n_e4_vs_e2": 1548,
+    "n_ko_vs_e3": 316
+   },
+   "fields": {
+    "r_e2_vs_e3": {
+     "value": 0.43510185950294245,
+     "window": [
+      0.4001,
+      0.47009999999999996
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e3": {
+     "value": 0.6398220585988901,
+     "window": [
+      0.6048,
+      0.6748000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e2": {
+     "value": 0.4458000770499418,
+     "window": [
+      0.41079999999999994,
+      0.4808
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_ko_vs_e3": {
+     "value": 0.6272894675426484,
+     "window": [
+      0.5922999999999999,
+      0.6623
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e2_vs_e3": {
+     "value": 444,
+     "window": [
+      434,
+      454
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e3": {
+     "value": 308,
+     "window": [
+      298,
+      318
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e2": {
+     "value": 1548,
+     "window": [
+      1533,
+      1563
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ko_vs_e3": {
+     "value": 316,
+     "window": [
+      306,
+      326
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 4,
+   "seconds": 98,
+   "usage": {
+    "input_tokens": 12,
+    "output_tokens": 2175,
+    "cache_read_input_tokens": 340015,
+    "cache_creation_input_tokens": 26586
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "ave_migration",
+   "task": "ave01_plate_qc",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": false,
+   "latch_passed": false,
+   "answer_source": "final message",
+   "answer": {
+    "n_wells_kept": 257,
+    "wells_kept": [
+     "SS_sc7784898",
+     "SS_sc7784899",
+     "SS_sc7784900",
+     "SS_sc7784902",
+     "SS_sc7784903",
+     "SS_sc7784904",
+     "SS_sc7784905",
+     "SS_sc7784906",
+     "SS_sc7784907",
+     "SS_sc7784909",
+     "SS_sc7784911",
+     "SS_sc7784913",
+     "SS_sc7784914",
+     "SS_sc7784915",
+     "SS_sc7784917",
+     "SS_sc7784920",
+     "SS_sc7784921",
+     "SS_sc7784922",
+     "SS_sc7784923",
+     "SS_sc7784924",
+     "SS_sc7784925",
+     "SS_sc7784926",
+     "SS_sc7784927",
+     "SS_sc7784928",
+     "SS_sc7784929",
+     "SS_sc7784930",
+     "SS_sc7784931",
+     "SS_sc7784932",
+     "SS_sc7784933",
+     "SS_sc7784934",
+     "SS_sc7784935",
+     "SS_sc7784936",
+     "SS_sc7784937",
+     "SS_sc7784938",
+     "SS_sc7784939",
+     "SS_sc7784940",
+     "SS_sc7784942",
+     "SS_sc7784943",
+     "SS_sc7784944",
+     "SS_sc7784945",
+     "SS_sc7784946",
+     "SS_sc7784947",
+     "SS_sc7784948",
+     "SS_sc7784949",
+     "SS_sc7784950",
+     "SS_sc7784951",
+     "SS_sc7784952",
+     "SS_sc7784953",
+     "SS_sc7784955",
+     "SS_sc7784956",
+     "SS_sc7784957",
+     "SS_sc7784958",
+     "SS_sc7784959",
+     "SS_sc7784960",
+     "SS_sc7784961",
+     "SS_sc7784962",
+     "SS_sc7784963",
+     "SS_sc7784964",
+     "SS_sc7784965",
+     "SS_sc7784966",
+     "SS_sc7784967",
+     "SS_sc7784968",
+     "SS_sc7784969",
+     "SS_sc7784970",
+     "SS_sc7784971",
+     "SS_sc7784972",
+     "SS_sc7784973",
+     "SS_sc7784974",
+     "SS_sc7784975",
+     "SS_sc7784976",
+     "SS_sc7784977",
+     "SS_sc7784978",
+     "SS_sc7784979",
+     "SS_sc7784980",
+     "SS_sc7784981",
+     "SS_sc7784982",
+     "SS_sc7784983",
+     "SS_sc7784984",
+     "SS_sc7784985",
+     "SS_sc7784986",
+     "SS_sc7784987",
+     "SS_sc7784988",
+     "SS_sc7784989",
+     "SS_sc7784990",
+     "SS_sc7784991",
+     "SS_sc7784992",
+     "SS_sc7784993",
+     "SS_sc7784994",
+     "SS_sc7784995",
+     "SS_sc7784996",
+     "SS_sc7784997",
+     "SS_sc7784998",
+     "SS_sc7784999",
+     "SS_sc7785000",
+     "SS_sc7785001",
+     "SS_sc7785003",
+     "SS_sc7785004",
+     "SS_sc7785005",
+     "SS_sc7785006",
+     "SS_sc7785007",
+     "SS_sc7785008",
+     "SS_sc7785009",
+     "SS_sc7785010",
+     "SS_sc7785011",
+     "SS_sc7785012",
+     "SS_sc7785013",
+     "SS_sc7785014",
+     "SS_sc7785015",
+     "SS_sc7785016",
+     "SS_sc7785017",
+     "SS_sc7785018",
+     "SS_sc7785019",
+     "SS_sc7785020",
+     "SS_sc7785021",
+     "SS_sc7785022",
+     "SS_sc7785023",
+     "SS_sc7785024",
+     "SS_sc7785025",
+     "SS_sc7785026",
+     "SS_sc7785027",
+     "SS_sc7785028",
+     "SS_sc7785029",
+     "SS_sc7785030",
+     "SS_sc7785031",
+     "SS_sc7785032",
+     "SS_sc7785033",
+     "SS_sc7785034",
+     "SS_sc7785035",
+     "SS_sc7785036",
+     "SS_sc7785037",
+     "SS_sc7785038",
+     "SS_sc7785039",
+     "SS_sc7785040",
+     "SS_sc7785041",
+     "SS_sc7785042",
+     "SS_sc7785043",
+     "SS_sc7785044",
+     "SS_sc7785045",
+     "SS_sc7785046",
+     "SS_sc7785047",
+     "SS_sc7785048",
+     "SS_sc7785049",
+     "SS_sc7785050",
+     "SS_sc7785051",
+     "SS_sc7785052",
+     "SS_sc7785053",
+     "SS_sc7785054",
+     "SS_sc7785055",
+     "SS_sc7785056",
+     "SS_sc7785057",
+     "SS_sc7785058",
+     "SS_sc7785059",
+     "SS_sc7785060",
+     "SS_sc7785061",
+     "SS_sc7785062",
+     "SS_sc7785063",
+     "SS_sc7785064",
+     "SS_sc7785065",
+     "SS_sc7785066",
+     "SS_sc7785067",
+     "SS_sc7785068",
+     "SS_sc7785069",
+     "SS_sc7785070",
+     "SS_sc7785071",
+     "SS_sc7785072",
+     "SS_sc7785073",
+     "SS_sc7785074",
+     "SS_sc7785075",
+     "SS_sc7785076",
+     "SS_sc7785077",
+     "SS_sc7785078",
+     "SS_sc7785079",
+     "SS_sc7785080",
+     "SS_sc7785081",
+     "SS_sc7785082",
+     "SS_sc7785083",
+     "SS_sc7785084",
+     "SS_sc7785085",
+     "SS_sc7785087",
+     "SS_sc7785088",
+     "SS_sc7785089",
+     "SS_sc7785090",
+     "SS_sc7785091",
+     "SS_sc7785092",
+     "SS_sc7785093",
+     "SS_sc7785094",
+     "SS_sc7785095",
+     "SS_sc7785096",
+     "SS_sc7785097",
+     "SS_sc7785098",
+     "SS_sc7785099",
+     "SS_sc7785100",
+     "SS_sc7785101",
+     "SS_sc7785102",
+     "SS_sc7785103",
+     "SS_sc7785104",
+     "SS_sc7785105",
+     "SS_sc7785106",
+     "SS_sc7785107",
+     "SS_sc7785108",
+     "SS_sc7785109",
+     "SS_sc7785110",
+     "SS_sc7785111",
+     "SS_sc7785112",
+     "SS_sc7785113",
+     "SS_sc7785114",
+     "SS_sc7785115",
+     "SS_sc7785116"
+    ]
+   },
+   "fields": {
+    "n_wells_kept": {
+     "value": 257,
+     "window": [
+      235,
+      275
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "wells_kept": {
+     "jaccard": 0.4792,
+     "threshold": 0.85,
+     "ok": false
+    }
+   },
+   "tool_calls": 9,
+   "seconds": 93,
+   "usage": {
+    "input_tokens": 38,
+    "output_tokens": 31061,
+    "cache_read_input_tokens": 1153198,
+    "cache_creation_input_tokens": 165966
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "ave_migration",
+   "task": "ave01_plate_qc",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_wells_kept": 248,
+    "wells_kept": [
+     "SS_sc7784898",
+     "SS_sc7784899",
+     "SS_sc7784900",
+     "SS_sc7784902",
+     "SS_sc7784903",
+     "SS_sc7784904",
+     "SS_sc7784905",
+     "SS_sc7784907",
+     "SS_sc7784909",
+     "SS_sc7784911",
+     "SS_sc7784913",
+     "SS_sc7784914",
+     "SS_sc7784915",
+     "SS_sc7784917",
+     "SS_sc7784920",
+     "SS_sc7784921",
+     "SS_sc7784922",
+     "SS_sc7784923",
+     "SS_sc7784924",
+     "SS_sc7784926",
+     "SS_sc7784927",
+     "SS_sc7784928",
+     "SS_sc7784930",
+     "SS_sc7784932",
+     "SS_sc7784933",
+     "SS_sc7784934",
+     "SS_sc7784935",
+     "SS_sc7784936",
+     "SS_sc7784937",
+     "SS_sc7784938",
+     "SS_sc7784939",
+     "SS_sc7784940",
+     "SS_sc7784942",
+     "SS_sc7784945",
+     "SS_sc7784947",
+     "SS_sc7784948",
+     "SS_sc7784949",
+     "SS_sc7784951",
+     "SS_sc7784953",
+     "SS_sc7784954",
+     "SS_sc7784955",
+     "SS_sc7784957",
+     "SS_sc7784959",
+     "SS_sc7784961",
+     "SS_sc7784965",
+     "SS_sc7784966",
+     "SS_sc7784967",
+     "SS_sc7784968",
+     "SS_sc7784970",
+     "SS_sc7784971",
+     "SS_sc7784972",
+     "SS_sc7784973",
+     "SS_sc7784974",
+     "SS_sc7784976",
+     "SS_sc7784977",
+     "SS_sc7784978",
+     "SS_sc7784979",
+     "SS_sc7784980",
+     "SS_sc7784981",
+     "SS_sc7784982",
+     "SS_sc7784983",
+     "SS_sc7784984",
+     "SS_sc7784985",
+     "SS_sc7784986",
+     "SS_sc7784987",
+     "SS_sc7784988",
+     "SS_sc7784989",
+     "SS_sc7784990",
+     "SS_sc7784991",
+     "SS_sc7784993",
+     "SS_sc7784994",
+     "SS_sc7784995",
+     "SS_sc7785001",
+     "SS_sc7785003",
+     "SS_sc7785005",
+     "SS_sc7785006",
+     "SS_sc7785007",
+     "SS_sc7785011",
+     "SS_sc7785012",
+     "SS_sc7785013",
+     "SS_sc7785014",
+     "SS_sc7785015",
+     "SS_sc7785016",
+     "SS_sc7785018",
+     "SS_sc7785019",
+     "SS_sc7785020",
+     "SS_sc7785021",
+     "SS_sc7785022",
+     "SS_sc7785024",
+     "SS_sc7785026",
+     "SS_sc7785027",
+     "SS_sc7785028",
+     "SS_sc7785030",
+     "SS_sc7785031",
+     "SS_sc7785032",
+     "SS_sc7785034",
+     "SS_sc7785035",
+     "SS_sc7785036",
+     "SS_sc7785037",
+     "SS_sc7785038",
+     "SS_sc7785039",
+     "SS_sc7785043",
+     "SS_sc7785044",
+     "SS_sc7785045",
+     "SS_sc7785047",
+     "SS_sc7785048",
+     "SS_sc7785049",
+     "SS_sc7785050",
+     "SS_sc7785051",
+     "SS_sc7785052",
+     "SS_sc7785053",
+     "SS_sc7785055",
+     "SS_sc7785056",
+     "SS_sc7785057",
+     "SS_sc7785059",
+     "SS_sc7785060",
+     "SS_sc7785061",
+     "SS_sc7785062",
+     "SS_sc7785063",
+     "SS_sc7785065",
+     "SS_sc7785066",
+     "SS_sc7785068",
+     "SS_sc7785069",
+     "SS_sc7785070",
+     "SS_sc7785071",
+     "SS_sc7785072",
+     "SS_sc7785074",
+     "SS_sc7785076",
+     "SS_sc7785077",
+     "SS_sc7785088",
+     "SS_sc7785089",
+     "SS_sc7785090",
+     "SS_sc7785091",
+     "SS_sc7785092",
+     "SS_sc7785093",
+     "SS_sc7785094",
+     "SS_sc7785097",
+     "SS_sc7785099",
+     "SS_sc7785101",
+     "SS_sc7785103",
+     "SS_sc7785105",
+     "SS_sc7785106",
+     "SS_sc7785107",
+     "SS_sc7785110",
+     "SS_sc7785111",
+     "SS_sc7785112",
+     "SS_sc7785113",
+     "SS_sc7785114",
+     "SS_sc7785115",
+     "SS_sc7785116",
+     "SS_sc7785117",
+     "SS_sc7785118",
+     "SS_sc7785119",
+     "SS_sc7785120",
+     "SS_sc7785121",
+     "SS_sc7785123",
+     "SS_sc7785124",
+     "SS_sc7785126",
+     "SS_sc7785128",
+     "SS_sc7785129",
+     "SS_sc7785130",
+     "SS_sc7785131",
+     "SS_sc7785132",
+     "SS_sc7785135",
+     "SS_sc7785136",
+     "SS_sc7785137",
+     "SS_sc7785139",
+     "SS_sc7785140",
+     "SS_sc7785141",
+     "SS_sc7785142",
+     "SS_sc7785143",
+     "SS_sc7785147",
+     "SS_sc7785148",
+     "SS_sc7785149",
+     "SS_sc7785153",
+     "SS_sc7785154",
+     "SS_sc7785155",
+     "SS_sc7785156",
+     "SS_sc7785157",
+     "SS_sc7785158",
+     "SS_sc7785160",
+     "SS_sc7785162",
+     "SS_sc7785164",
+     "SS_sc7785165",
+     "SS_sc7785166",
+     "SS_sc7785168",
+     "SS_sc7785170",
+     "SS_sc7785172",
+     "SS_sc7785173",
+     "SS_sc7785174",
+     "SS_sc7785175",
+     "SS_sc7785176",
+     "SS_sc7785178",
+     "SS_sc7785179",
+     "SS_sc7785180",
+     "SS_sc7785181",
+     "SS_sc7785183",
+     "SS_sc7785184",
+     "SS_sc7785185",
+     "SS_sc7785187",
+     "SS_sc7785188",
+     "SS_sc7785190",
+     "SS_sc7785192",
+     "SS_sc7785193",
+     "SS_sc7785195",
+     "SS_sc7785197",
+     "SS_sc7785199",
+     "SS_sc7785200",
+     "SS_sc7785203",
+     "SS_sc7785204",
+     "SS_sc7785205",
+     "SS_sc7785206",
+     "SS_sc7785208",
+     "SS_sc7785209",
+     "SS_sc7785210",
+     "SS_sc7785211",
+     "SS_sc7785212",
+     "SS_sc7785213",
+     "SS_sc7785214",
+     "SS_sc7785215",
+     "SS_sc7785216",
+     "SS_sc7785217",
+     "SS_sc7785218",
+     "SS_sc7785220",
+     "SS_sc7785221",
+     "SS_sc7785222",
+     "SS_sc7785223",
+     "SS_sc7785224",
+     "SS_sc7785226",
+     "SS_sc7785227",
+     "SS_sc7785228",
+     "SS_sc7785231",
+     "SS_sc7785233",
+     "SS_sc7785234",
+     "SS_sc7785235",
+     "SS_sc7785237",
+     "SS_sc7785239",
+     "SS_sc7785241",
+     "SS_sc7785243",
+     "SS_sc7785245",
+     "SS_sc7785255",
+     "SS_sc7785257",
+     "SS_sc7785259",
+     "SS_sc7785262",
+     "SS_sc7785265",
+     "SS_sc7785267",
+     "SS_sc7785268",
+     "SS_sc7785269"
+    ]
+   },
+   "fields": {
+    "n_wells_kept": {
+     "value": 248,
+     "window": [
+      235,
+      275
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "wells_kept": {
+     "jaccard": 0.9725,
+     "threshold": 0.85,
+     "ok": true
+    }
+   },
+   "tool_calls": 20,
+   "seconds": 514,
+   "usage": {
+    "input_tokens": 80,
+    "output_tokens": 90919,
+    "cache_read_input_tokens": 3298452,
+    "cache_creation_input_tokens": 234246
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "ave_migration",
+   "task": "ave01_plate_qc",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_wells_kept": 262,
+    "wells_kept": [
+     "SS_sc7784898",
+     "SS_sc7784899",
+     "SS_sc7784900",
+     "SS_sc7784902",
+     "SS_sc7784903",
+     "SS_sc7784904",
+     "SS_sc7784905",
+     "SS_sc7784907",
+     "SS_sc7784909",
+     "SS_sc7784911",
+     "SS_sc7784912",
+     "SS_sc7784913",
+     "SS_sc7784914",
+     "SS_sc7784915",
+     "SS_sc7784917",
+     "SS_sc7784920",
+     "SS_sc7784921",
+     "SS_sc7784922",
+     "SS_sc7784923",
+     "SS_sc7784924",
+     "SS_sc7784926",
+     "SS_sc7784927",
+     "SS_sc7784928",
+     "SS_sc7784930",
+     "SS_sc7784932",
+     "SS_sc7784933",
+     "SS_sc7784934",
+     "SS_sc7784935",
+     "SS_sc7784936",
+     "SS_sc7784937",
+     "SS_sc7784938",
+     "SS_sc7784939",
+     "SS_sc7784940",
+     "SS_sc7784942",
+     "SS_sc7784945",
+     "SS_sc7784947",
+     "SS_sc7784948",
+     "SS_sc7784949",
+     "SS_sc7784951",
+     "SS_sc7784953",
+     "SS_sc7784954",
+     "SS_sc7784955",
+     "SS_sc7784957",
+     "SS_sc7784959",
+     "SS_sc7784961",
+     "SS_sc7784965",
+     "SS_sc7784966",
+     "SS_sc7784967",
+     "SS_sc7784968",
+     "SS_sc7784970",
+     "SS_sc7784971",
+     "SS_sc7784972",
+     "SS_sc7784973",
+     "SS_sc7784974",
+     "SS_sc7784976",
+     "SS_sc7784977",
+     "SS_sc7784978",
+     "SS_sc7784979",
+     "SS_sc7784980",
+     "SS_sc7784981",
+     "SS_sc7784982",
+     "SS_sc7784983",
+     "SS_sc7784984",
+     "SS_sc7784985",
+     "SS_sc7784986",
+     "SS_sc7784987",
+     "SS_sc7784988",
+     "SS_sc7784989",
+     "SS_sc7784990",
+     "SS_sc7784991",
+     "SS_sc7784993",
+     "SS_sc7784994",
+     "SS_sc7784995",
+     "SS_sc7784999",
+     "SS_sc7785001",
+     "SS_sc7785002",
+     "SS_sc7785003",
+     "SS_sc7785005",
+     "SS_sc7785006",
+     "SS_sc7785007",
+     "SS_sc7785011",
+     "SS_sc7785012",
+     "SS_sc7785013",
+     "SS_sc7785014",
+     "SS_sc7785015",
+     "SS_sc7785016",
+     "SS_sc7785018",
+     "SS_sc7785019",
+     "SS_sc7785020",
+     "SS_sc7785021",
+     "SS_sc7785022",
+     "SS_sc7785024",
+     "SS_sc7785026",
+     "SS_sc7785027",
+     "SS_sc7785028",
+     "SS_sc7785030",
+     "SS_sc7785031",
+     "SS_sc7785032",
+     "SS_sc7785034",
+     "SS_sc7785035",
+     "SS_sc7785036",
+     "SS_sc7785037",
+     "SS_sc7785038",
+     "SS_sc7785039",
+     "SS_sc7785043",
+     "SS_sc7785044",
+     "SS_sc7785045",
+     "SS_sc7785047",
+     "SS_sc7785048",
+     "SS_sc7785049",
+     "SS_sc7785050",
+     "SS_sc7785051",
+     "SS_sc7785052",
+     "SS_sc7785053",
+     "SS_sc7785055",
+     "SS_sc7785056",
+     "SS_sc7785057",
+     "SS_sc7785059",
+     "SS_sc7785060",
+     "SS_sc7785061",
+     "SS_sc7785062",
+     "SS_sc7785063",
+     "SS_sc7785065",
+     "SS_sc7785066",
+     "SS_sc7785068",
+     "SS_sc7785069",
+     "SS_sc7785070",
+     "SS_sc7785071",
+     "SS_sc7785072",
+     "SS_sc7785074",
+     "SS_sc7785075",
+     "SS_sc7785076",
+     "SS_sc7785077",
+     "SS_sc7785078",
+     "SS_sc7785079",
+     "SS_sc7785080",
+     "SS_sc7785081",
+     "SS_sc7785082",
+     "SS_sc7785083",
+     "SS_sc7785084",
+     "SS_sc7785087",
+     "SS_sc7785088",
+     "SS_sc7785089",
+     "SS_sc7785090",
+     "SS_sc7785091",
+     "SS_sc7785092",
+     "SS_sc7785093",
+     "SS_sc7785094",
+     "SS_sc7785097",
+     "SS_sc7785099",
+     "SS_sc7785101",
+     "SS_sc7785103",
+     "SS_sc7785105",
+     "SS_sc7785106",
+     "SS_sc7785107",
+     "SS_sc7785110",
+     "SS_sc7785111",
+     "SS_sc7785112",
+     "SS_sc7785113",
+     "SS_sc7785114",
+     "SS_sc7785115",
+     "SS_sc7785116",
+     "SS_sc7785117",
+     "SS_sc7785118",
+     "SS_sc7785119",
+     "SS_sc7785120",
+     "SS_sc7785121",
+     "SS_sc7785123",
+     "SS_sc7785124",
+     "SS_sc7785126",
+     "SS_sc7785128",
+     "SS_sc7785129",
+     "SS_sc7785130",
+     "SS_sc7785131",
+     "SS_sc7785132",
+     "SS_sc7785135",
+     "SS_sc7785136",
+     "SS_sc7785137",
+     "SS_sc7785139",
+     "SS_sc7785140",
+     "SS_sc7785141",
+     "SS_sc7785142",
+     "SS_sc7785143",
+     "SS_sc7785145",
+     "SS_sc7785147",
+     "SS_sc7785148",
+     "SS_sc7785149",
+     "SS_sc7785153",
+     "SS_sc7785154",
+     "SS_sc7785155",
+     "SS_sc7785156",
+     "SS_sc7785157",
+     "SS_sc7785158",
+     "SS_sc7785160",
+     "SS_sc7785162",
+     "SS_sc7785164",
+     "SS_sc7785165",
+     "SS_sc7785166",
+     "SS_sc7785168",
+     "SS_sc7785170",
+     "SS_sc7785172",
+     "SS_sc7785173",
+     "SS_sc7785174",
+     "SS_sc7785175",
+     "SS_sc7785176",
+     "SS_sc7785178",
+     "SS_sc7785179",
+     "SS_sc7785180",
+     "SS_sc7785181",
+     "SS_sc7785183",
+     "SS_sc7785184",
+     "SS_sc7785185",
+     "SS_sc7785187",
+     "SS_sc7785188",
+     "SS_sc7785190",
+     "SS_sc7785192",
+     "SS_sc7785193",
+     "SS_sc7785195",
+     "SS_sc7785197",
+     "SS_sc7785199",
+     "SS_sc7785200",
+     "SS_sc7785203",
+     "SS_sc7785204",
+     "SS_sc7785205",
+     "SS_sc7785206",
+     "SS_sc7785208",
+     "SS_sc7785209",
+     "SS_sc7785210",
+     "SS_sc7785211",
+     "SS_sc7785212",
+     "SS_sc7785213",
+     "SS_sc7785214",
+     "SS_sc7785215",
+     "SS_sc7785216",
+     "SS_sc7785217",
+     "SS_sc7785218",
+     "SS_sc7785220",
+     "SS_sc7785221",
+     "SS_sc7785222",
+     "SS_sc7785223",
+     "SS_sc7785224",
+     "SS_sc7785226",
+     "SS_sc7785227",
+     "SS_sc7785228",
+     "SS_sc7785231",
+     "SS_sc7785233",
+     "SS_sc7785234",
+     "SS_sc7785235",
+     "SS_sc7785237",
+     "SS_sc7785239",
+     "SS_sc7785241",
+     "SS_sc7785243",
+     "SS_sc7785245",
+     "SS_sc7785255",
+     "SS_sc7785257",
+     "SS_sc7785259",
+     "SS_sc7785260",
+     "SS_sc7785262",
+     "SS_sc7785265",
+     "SS_sc7785267",
+     "SS_sc7785268",
+     "SS_sc7785269"
+    ]
+   },
+   "fields": {
+    "n_wells_kept": {
+     "value": 262,
+     "window": [
+      235,
+      275
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "wells_kept": {
+     "jaccard": 0.9583,
+     "threshold": 0.85,
+     "ok": true
+    }
+   },
+   "tool_calls": 9,
+   "seconds": 285,
+   "usage": {
+    "input_tokens": 26,
+    "output_tokens": 9553,
+    "cache_read_input_tokens": 781068,
+    "cache_creation_input_tokens": 86076
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "ave_migration",
+   "task": "ave02_pseudotime_root",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "rho_pseudotime_cer1": -0.8213465211407318,
+    "frac_high_in_ave": 0.4,
+    "high_in_ave_panel": [
+     "Cd24a",
+     "Gpc4",
+     "Grb10",
+     "Sfrp1",
+     "Tspan7"
+    ]
+   },
+   "fields": {
+    "rho_pseudotime_cer1": {
+     "value": -0.8213465211407318,
+     "window": [
+      -1.0387,
+      -0.5387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_high_in_ave": {
+     "value": 0.4,
+     "window": [
+      0.28690000000000004,
+      0.4669
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "high_in_ave_panel": {
+     "jaccard": 1.0,
+     "threshold": 0.6,
+     "ok": true
+    }
+   },
+   "tool_calls": 7,
+   "seconds": 272,
+   "usage": {
+    "input_tokens": 42,
+    "output_tokens": 20034,
+    "cache_read_input_tokens": 1135301,
+    "cache_creation_input_tokens": 74312
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [
+     "<harness>/"
+    ],
+    "commands_without_folder": [
+     "sleep 90; ls <harness>/ 2>/dev/null | head -2; echo waited"
+    ]
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "ave_migration",
+   "task": "ave02_pseudotime_root",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "rho_pseudotime_cer1": -0.8049,
+    "frac_high_in_ave": 0.3905,
+    "high_in_ave_panel": [
+     "Cd24a",
+     "Gpc4",
+     "Grb10",
+     "Sfrp1",
+     "Tspan7"
+    ]
+   },
+   "fields": {
+    "rho_pseudotime_cer1": {
+     "value": -0.8049,
+     "window": [
+      -1.0387,
+      -0.5387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_high_in_ave": {
+     "value": 0.3905,
+     "window": [
+      0.28690000000000004,
+      0.4669
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "high_in_ave_panel": {
+     "jaccard": 1.0,
+     "threshold": 0.6,
+     "ok": true
+    }
+   },
+   "tool_calls": 13,
+   "seconds": 533,
+   "usage": {
+    "input_tokens": 54,
+    "output_tokens": 65496,
+    "cache_read_input_tokens": 2074600,
+    "cache_creation_input_tokens": 119754
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [
+     "<harness>/bakv213kg.output"
+    ],
+    "commands_without_folder": [
+     "cat <harness>/bakv213kg.output | tail -n 50"
+    ]
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "ave_migration",
+   "task": "ave02_pseudotime_root",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "rho_pseudotime_cer1": -0.8062184046118311,
+    "frac_high_in_ave": 0.3942537909018356,
+    "high_in_ave_panel": [
+     "Cd24a",
+     "Gpc4",
+     "Grb10",
+     "Sfrp1",
+     "Tspan7"
+    ]
+   },
+   "fields": {
+    "rho_pseudotime_cer1": {
+     "value": -0.8062184046118311,
+     "window": [
+      -1.0387,
+      -0.5387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_high_in_ave": {
+     "value": 0.3942537909018356,
+     "window": [
+      0.28690000000000004,
+      0.4669
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "high_in_ave_panel": {
+     "jaccard": 1.0,
+     "threshold": 0.6,
+     "ok": true
+    }
+   },
+   "tool_calls": 11,
+   "seconds": 223,
+   "usage": {
+    "input_tokens": 38,
+    "output_tokens": 7376,
+    "cache_read_input_tokens": 1107578,
+    "cache_creation_input_tokens": 38823
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [
+     "<harness>/b8aj5pcy6.output"
+    ],
+    "commands_without_folder": [
+     "sleep 100; cat <harness>/b8aj5pcy6.output | grep -v Warn | tail",
+     "cat <harness>/b8aj5pcy6.output | grep -v -i warn | tail",
+     "cat <harness>/b8aj5pcy6.output | tail -5"
+    ]
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "ave_migration",
+   "task": "ave03_ephrin_bootstrap_signs",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": false,
+   "latch_passed": false,
+   "answer_source": "final message",
+   "answer": {
+    "n_genes_kept_e55": 14,
+    "n_significant_e55": 2,
+    "significant_genes_e55": [
+     "Efnb1",
+     "Epha4"
+    ],
+    "n_genes_kept_e625": 13,
+    "n_significant_e625": 6,
+    "significant_genes_e625": [
+     "Efna2",
+     "Efna5",
+     "Efnb1",
+     "Epha1",
+     "Epha4",
+     "Ephb3"
+    ]
+   },
+   "fields": {
+    "n_genes_kept_e55": {
+     "value": 14,
+     "window": [
+      13,
+      15
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_significant_e55": {
+     "value": 2,
+     "window": [
+      4,
+      8
+     ],
+     "ok": false,
+     "gap": 2
+    },
+    "n_genes_kept_e625": {
+     "value": 13,
+     "window": [
+      12,
+      14
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_significant_e625": {
+     "value": 6,
+     "window": [
+      6,
+      10
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "significant_genes_e55": {
+     "jaccard": 0.3333,
+     "threshold": 0.7,
+     "ok": false
+    },
+    "significant_genes_e625": {
+     "jaccard": 0.75,
+     "threshold": 0.7,
+     "ok": true
+    }
+   },
+   "tool_calls": 3,
+   "seconds": 22,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 6162,
+    "cache_read_input_tokens": 433356,
+    "cache_creation_input_tokens": 54584
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "ave_migration",
+   "task": "ave03_ephrin_bootstrap_signs",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_genes_kept_e55": 14,
+    "n_significant_e55": 6,
+    "significant_genes_e55": [
+     "Efna3",
+     "Efna5",
+     "Efnb1",
+     "Efnb2",
+     "Epha4",
+     "Ephb3"
+    ],
+    "n_genes_kept_e625": 13,
+    "n_significant_e625": 8,
+    "significant_genes_e625": [
+     "Efna2",
+     "Efna3",
+     "Efna5",
+     "Efnb1",
+     "Efnb2",
+     "Epha1",
+     "Epha4",
+     "Ephb3"
+    ]
+   },
+   "fields": {
+    "n_genes_kept_e55": {
+     "value": 14,
+     "window": [
+      13,
+      15
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_significant_e55": {
+     "value": 6,
+     "window": [
+      4,
+      8
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_genes_kept_e625": {
+     "value": 13,
+     "window": [
+      12,
+      14
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_significant_e625": {
+     "value": 8,
+     "window": [
+      6,
+      10
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "significant_genes_e55": {
+     "jaccard": 1.0,
+     "threshold": 0.7,
+     "ok": true
+    },
+    "significant_genes_e625": {
+     "jaccard": 1.0,
+     "threshold": 0.7,
+     "ok": true
+    }
+   },
+   "tool_calls": 12,
+   "seconds": 392,
+   "usage": {
+    "input_tokens": 46,
+    "output_tokens": 39477,
+    "cache_read_input_tokens": 1624996,
+    "cache_creation_input_tokens": 96815
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "ave_migration",
+   "task": "ave03_ephrin_bootstrap_signs",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_genes_kept_e55": 14,
+    "n_significant_e55": 6,
+    "significant_genes_e55": [
+     "Efna3",
+     "Efna5",
+     "Efnb1",
+     "Efnb2",
+     "Epha4",
+     "Ephb3"
+    ],
+    "n_genes_kept_e625": 13,
+    "n_significant_e625": 8,
+    "significant_genes_e625": [
+     "Efna2",
+     "Efna3",
+     "Efna5",
+     "Efnb1",
+     "Efnb2",
+     "Epha1",
+     "Epha4",
+     "Ephb3"
+    ]
+   },
+   "fields": {
+    "n_genes_kept_e55": {
+     "value": 14,
+     "window": [
+      13,
+      15
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_significant_e55": {
+     "value": 6,
+     "window": [
+      4,
+      8
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_genes_kept_e625": {
+     "value": 13,
+     "window": [
+      12,
+      14
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_significant_e625": {
+     "value": 8,
+     "window": [
+      6,
+      10
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "significant_genes_e55": {
+     "jaccard": 1.0,
+     "threshold": 0.7,
+     "ok": true
+    },
+    "significant_genes_e625": {
+     "jaccard": 1.0,
+     "threshold": 0.7,
+     "ok": true
+    }
+   },
+   "tool_calls": 5,
+   "seconds": 31,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 3749,
+    "cache_read_input_tokens": 459468,
+    "cache_creation_input_tokens": 29881
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "ave_migration",
+   "task": "ave04_dkk1_timing",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "dkk1_auc_e55": 0.5176,
+    "dkk1_auc_e625": 0.7778,
+    "cer1_auc_e55": 0.8278,
+    "cer1_auc_e625": 0.8991,
+    "conclusion": 2
+   },
+   "fields": {
+    "dkk1_auc_e55": {
+     "value": 0.5176,
+     "window": [
+      0.45759999999999995,
+      0.5775999999999999
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "dkk1_auc_e625": {
+     "value": 0.7778,
+     "window": [
+      0.7178,
+      0.8378000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "cer1_auc_e55": {
+     "value": 0.8278,
+     "window": [
+      0.7678,
+      0.8877999999999999
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "cer1_auc_e625": {
+     "value": 0.8991,
+     "window": [
+      0.8391,
+      0.9591000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "conclusion": {
+     "value": 2,
+     "window": [
+      2,
+      2
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 5,
+   "seconds": 18,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 3805,
+    "cache_read_input_tokens": 417312,
+    "cache_creation_input_tokens": 65609
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "ave_migration",
+   "task": "ave04_dkk1_timing",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "dkk1_auc_e55": 0.5176,
+    "dkk1_auc_e625": 0.7778,
+    "cer1_auc_e55": 0.8278,
+    "cer1_auc_e625": 0.8991,
+    "conclusion": 2
+   },
+   "fields": {
+    "dkk1_auc_e55": {
+     "value": 0.5176,
+     "window": [
+      0.45759999999999995,
+      0.5775999999999999
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "dkk1_auc_e625": {
+     "value": 0.7778,
+     "window": [
+      0.7178,
+      0.8378000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "cer1_auc_e55": {
+     "value": 0.8278,
+     "window": [
+      0.7678,
+      0.8877999999999999
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "cer1_auc_e625": {
+     "value": 0.8991,
+     "window": [
+      0.8391,
+      0.9591000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "conclusion": {
+     "value": 2,
+     "window": [
+      2,
+      2
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 7,
+   "seconds": 131,
+   "usage": {
+    "input_tokens": 38,
+    "output_tokens": 21545,
+    "cache_read_input_tokens": 1169833,
+    "cache_creation_input_tokens": 84307
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "ave_migration",
+   "task": "ave04_dkk1_timing",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "dkk1_auc_e55": 0.5176,
+    "dkk1_auc_e625": 0.7778,
+    "cer1_auc_e55": 0.8278,
+    "cer1_auc_e625": 0.8991,
+    "conclusion": 2
+   },
+   "fields": {
+    "dkk1_auc_e55": {
+     "value": 0.5176,
+     "window": [
+      0.45759999999999995,
+      0.5775999999999999
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "dkk1_auc_e625": {
+     "value": 0.7778,
+     "window": [
+      0.7178,
+      0.8378000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "cer1_auc_e55": {
+     "value": 0.8278,
+     "window": [
+      0.7678,
+      0.8877999999999999
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "cer1_auc_e625": {
+     "value": 0.8991,
+     "window": [
+      0.8391,
+      0.9591000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "conclusion": {
+     "value": 2,
+     "window": [
+      2,
+      2
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 3,
+   "seconds": 26,
+   "usage": {
+    "input_tokens": 8,
+    "output_tokens": 1709,
+    "cache_read_input_tokens": 216915,
+    "cache_creation_input_tokens": 24745
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "cell_competition",
+   "task": "cc01_cell_qc",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": false,
+   "latch_passed": false,
+   "answer_source": "final message",
+   "answer": {
+    "n_cells_kept": 548,
+    "n_ci_cells_kept": 247,
+    "n_dmso_cells_kept": 301
+   },
+   "fields": {
+    "n_cells_kept": {
+     "value": 548,
+     "window": [
+      678,
+      768
+     ],
+     "ok": false,
+     "gap": 130
+    },
+    "n_ci_cells_kept": {
+     "value": 247,
+     "window": [
+      347,
+      387
+     ],
+     "ok": false,
+     "gap": 100
+    },
+    "n_dmso_cells_kept": {
+     "value": 301,
+     "window": [
+      321,
+      391
+     ],
+     "ok": false,
+     "gap": 20
+    }
+   },
+   "tool_calls": 5,
+   "seconds": 24,
+   "usage": {
+    "input_tokens": 22,
+    "output_tokens": 8307,
+    "cache_read_input_tokens": 627339,
+    "cache_creation_input_tokens": 57455
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "cell_competition",
+   "task": "cc01_cell_qc",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_cells_kept": 723,
+    "n_ci_cells_kept": 367,
+    "n_dmso_cells_kept": 356
+   },
+   "fields": {
+    "n_cells_kept": {
+     "value": 723,
+     "window": [
+      678,
+      768
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ci_cells_kept": {
+     "value": 367,
+     "window": [
+      347,
+      387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_dmso_cells_kept": {
+     "value": 356,
+     "window": [
+      321,
+      391
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 7,
+   "seconds": 247,
+   "usage": {
+    "input_tokens": 30,
+    "output_tokens": 48585,
+    "cache_read_input_tokens": 1004959,
+    "cache_creation_input_tokens": 118682
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "cell_competition",
+   "task": "cc01_cell_qc",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "n_cells_kept": 702,
+    "n_ci_cells_kept": 354,
+    "n_dmso_cells_kept": 348
+   },
+   "fields": {
+    "n_cells_kept": {
+     "value": 702,
+     "window": [
+      678,
+      768
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ci_cells_kept": {
+     "value": 354,
+     "window": [
+      347,
+      387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_dmso_cells_kept": {
+     "value": 348,
+     "window": [
+      321,
+      391
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 5,
+   "seconds": 38,
+   "usage": {
+    "input_tokens": 18,
+    "output_tokens": 4744,
+    "cache_read_input_tokens": 525973,
+    "cache_creation_input_tokens": 30871
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "cell_competition",
+   "task": "cc02_losing_score_direction",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "rho_samm50": -0.4853,
+    "rho_mt_atp6": -0.4351,
+    "rho_atf4": 0.3868,
+    "rho_sesn2": 0.2532
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.4853,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.4351,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.3868,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.2532,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 18,
+   "seconds": 405,
+   "usage": {
+    "input_tokens": 62,
+    "output_tokens": 24073,
+    "cache_read_input_tokens": 2102435,
+    "cache_creation_input_tokens": 84092
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [
+     "<harness>/bh1kah8bq.output"
+    ],
+    "commands_without_folder": [
+     "sleep 100; cat <harness>/bh1kah8bq.output | tail -30"
+    ]
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "cell_competition",
+   "task": "cc02_losing_score_direction",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "rho_samm50": -0.7311,
+    "rho_mt_atp6": -0.5896,
+    "rho_atf4": 0.6438,
+    "rho_sesn2": 0.5461
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.7311,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.5896,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.6438,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.5461,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 18,
+   "seconds": 841,
+   "usage": {
+    "input_tokens": 76,
+    "output_tokens": 102688,
+    "cache_read_input_tokens": 3461479,
+    "cache_creation_input_tokens": 179188
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [
+     "<harness>/b0zd32nzj.output",
+     "<harness>/br8adpi3j.output"
+    ],
+    "commands_without_folder": [
+     "cat <harness>/br8adpi3j.output; ps aux | grep variants3 | grep -v grep | head",
+     "sleep 45; cat <harness>/br8adpi3j.output",
+     "cat <harness>/br8adpi3j.output"
+    ]
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "cell_competition",
+   "task": "cc02_losing_score_direction",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "rho_samm50": -0.7240972858275118,
+    "rho_mt_atp6": -0.5596724013466855,
+    "rho_atf4": 0.6142150716750572,
+    "rho_sesn2": 0.5133312818995397
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.7240972858275118,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.5596724013466855,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.6142150716750572,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.5133312818995397,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 19,
+   "seconds": 319,
+   "usage": {
+    "input_tokens": 68,
+    "output_tokens": 7994,
+    "cache_read_input_tokens": 2013972,
+    "cache_creation_input_tokens": 46009
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [
+     "<harness>/bpc2isnti.output"
+    ],
+    "commands_without_folder": [
+     "sleep 90; cat <harness>/bpc2isnti.output",
+     "ps aux | grep a.py | head -3",
+     "cat <harness>/bpc2isnti.output; ps aux | grep \"a.py\" | grep -v grep | head"
+    ]
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "cell_competition",
+   "task": "cc03_rnr1_heteroplasmy",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "frac_heteroplasmic_winner": 0.058823529411764705,
+    "frac_heteroplasmic_intermediate": 0.5757575757575758,
+    "frac_heteroplasmic_loser": 0.8793103448275862,
+    "n_cells_used": 225
+   },
+   "fields": {
+    "frac_heteroplasmic_winner": {
+     "value": 0.058823529411764705,
+     "window": [
+      0.008999999999999994,
+      0.109
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_intermediate": {
+     "value": 0.5757575757575758,
+     "window": [
+      0.48300000000000004,
+      0.603
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_loser": {
+     "value": 0.8793103448275862,
+     "window": [
+      0.793,
+      0.953
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_cells_used": {
+     "value": 225,
+     "window": [
+      195,
+      235
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 4,
+   "seconds": 21,
+   "usage": {
+    "input_tokens": 16,
+    "output_tokens": 5145,
+    "cache_read_input_tokens": 440099,
+    "cache_creation_input_tokens": 48267
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "cell_competition",
+   "task": "cc03_rnr1_heteroplasmy",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "frac_heteroplasmic_winner": 0.058824,
+    "frac_heteroplasmic_intermediate": 0.543478,
+    "frac_heteroplasmic_loser": 0.872727,
+    "n_cells_used": 215
+   },
+   "fields": {
+    "frac_heteroplasmic_winner": {
+     "value": 0.058824,
+     "window": [
+      0.008999999999999994,
+      0.109
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_intermediate": {
+     "value": 0.543478,
+     "window": [
+      0.48300000000000004,
+      0.603
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_loser": {
+     "value": 0.872727,
+     "window": [
+      0.793,
+      0.953
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_cells_used": {
+     "value": 215,
+     "window": [
+      195,
+      235
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 8,
+   "seconds": 262,
+   "usage": {
+    "input_tokens": 46,
+    "output_tokens": 67767,
+    "cache_read_input_tokens": 1453675,
+    "cache_creation_input_tokens": 119176
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "cell_competition",
+   "task": "cc03_rnr1_heteroplasmy",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "frac_heteroplasmic_winner": 0.058823529411764705,
+    "frac_heteroplasmic_intermediate": 0.5757575757575758,
+    "frac_heteroplasmic_loser": 0.8793103448275862,
+    "n_cells_used": 225
+   },
+   "fields": {
+    "frac_heteroplasmic_winner": {
+     "value": 0.058823529411764705,
+     "window": [
+      0.008999999999999994,
+      0.109
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_intermediate": {
+     "value": 0.5757575757575758,
+     "window": [
+      0.48300000000000004,
+      0.603
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_loser": {
+     "value": 0.8793103448275862,
+     "window": [
+      0.793,
+      0.953
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_cells_used": {
+     "value": 225,
+     "window": [
+      195,
+      235
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 3,
+   "seconds": 34,
+   "usage": {
+    "input_tokens": 10,
+    "output_tokens": 2139,
+    "cache_read_input_tokens": 275863,
+    "cache_creation_input_tokens": 24815
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "haiku",
+   "paper": "cell_competition",
+   "task": "cc04_resp_chain_enrichment",
+   "model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "passed": false,
+   "latch_passed": false,
+   "answer_source": "final message",
+   "answer": {
+    "frac_genes_decreasing": 0.1933372741091032,
+    "frac_resp_chain_decreasing": 0.8666666666666667,
+    "fold_enrichment": 4.482667249035452,
+    "neg_log10_p": 49.5659972714888
+   },
+   "fields": {
+    "frac_genes_decreasing": {
+     "value": 0.1933372741091032,
+     "window": [
+      0.256,
+      0.556
+     ],
+     "ok": false,
+     "gap": 0.0626627258908968
+    },
+    "frac_resp_chain_decreasing": {
+     "value": 0.8666666666666667,
+     "window": [
+      0.869,
+      1.029
+     ],
+     "ok": false,
+     "gap": 0.0023333333333332984
+    },
+    "fold_enrichment": {
+     "value": 4.482667249035452,
+     "window": [
+      1.14,
+      3.54
+     ],
+     "ok": false,
+     "gap": 0.942667249035452
+    },
+    "neg_log10_p": {
+     "value": 49.5659972714888,
+     "window": [
+      14.899999999999999,
+      44.9
+     ],
+     "ok": false,
+     "gap": 4.6659972714887985
+    }
+   },
+   "tool_calls": 7,
+   "seconds": 47,
+   "usage": {
+    "input_tokens": 26,
+    "output_tokens": 7905,
+    "cache_read_input_tokens": 784522,
+    "cache_creation_input_tokens": 68927
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "opus",
+   "paper": "cell_competition",
+   "task": "cc04_resp_chain_enrichment",
+   "model_ids": [
+    "claude-opus-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "frac_genes_decreasing": 0.3232,
+    "frac_resp_chain_decreasing": 0.9485,
+    "fold_enrichment": 2.935,
+    "neg_log10_p": 38.42
+   },
+   "fields": {
+    "frac_genes_decreasing": {
+     "value": 0.3232,
+     "window": [
+      0.256,
+      0.556
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_resp_chain_decreasing": {
+     "value": 0.9485,
+     "window": [
+      0.869,
+      1.029
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "fold_enrichment": {
+     "value": 2.935,
+     "window": [
+      1.14,
+      3.54
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neg_log10_p": {
+     "value": 38.42,
+     "window": [
+      14.899999999999999,
+      44.9
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 10,
+   "seconds": 392,
+   "usage": {
+    "input_tokens": 44,
+    "output_tokens": 72604,
+    "cache_read_input_tokens": 1648528,
+    "cache_creation_input_tokens": 142816
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  },
+  {
+   "model": "sonnet",
+   "paper": "cell_competition",
+   "task": "cc04_resp_chain_enrichment",
+   "model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "passed": true,
+   "latch_passed": true,
+   "answer_source": "final message",
+   "answer": {
+    "frac_genes_decreasing": 0.3629,
+    "frac_resp_chain_decreasing": 0.9381,
+    "fold_enrichment": 2.585,
+    "neg_log10_p": 32.46
+   },
+   "fields": {
+    "frac_genes_decreasing": {
+     "value": 0.3629,
+     "window": [
+      0.256,
+      0.556
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_resp_chain_decreasing": {
+     "value": 0.9381,
+     "window": [
+      0.869,
+      1.029
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "fold_enrichment": {
+     "value": 2.585,
+     "window": [
+      1.14,
+      3.54
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neg_log10_p": {
+     "value": 32.46,
+     "window": [
+      14.899999999999999,
+      44.9
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   },
+   "tool_calls": 5,
+   "seconds": 50,
+   "usage": {
+    "input_tokens": 18,
+    "output_tokens": 5001,
+    "cache_read_input_tokens": 527545,
+    "cache_creation_input_tokens": 30307
+   },
+   "audit": {
+    "web_calls": 0,
+    "paths_outside": [],
+    "harness_paths": [],
+    "commands_without_folder": []
+   }
+  }
+ ]
+}
