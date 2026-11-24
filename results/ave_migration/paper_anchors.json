@@ -1,0 +1,38 @@
+[
+ {
+  "paper_says": "255 good-quality cells at 5.5 dpc and 238 at 6.25 dpc after the five QC thresholds; 252 and 235 after 3 unassigned cells per stage are removed",
+  "where": "STAR Methods, Transcript quantification, quality control and normalization; Cell clustering",
+  "recomputed": "The five thresholds on the public counts, with read pairs from the ENA run report, keep 263 of 384 wells at 5.5 dpc (255 once the plate's control wells are set aside; 384 of 384 wells then match the authors' pass or fail in the SDRF) and 238 at 6.25 dpc (384 of 384 match). The SDRF labels 252 and 235 cells.",
+  "agrees": true
+ },
+ {
+  "paper_says": "At 5.5 dpc the embryonic VE cluster is split into AVE and emVE with pam (k = 2) on the Spearman correlation distance",
+  "where": "STAR Methods, Cell clustering and assignment of cluster identities",
+  "recomputed": "pam (k = 2) on sqrt((1 - r) / 2) over the 3,000 most variable genes of the 173 embryonic VE cells gives 95 AVE and 78 emVE cells; 100.0% of cells match the authors' labels in the SDRF (95 AVE, 78 emVE).",
+  "agrees": true
+ },
+ {
+  "paper_says": "952 genes at 5.5 dpc and 915 at 6.25 dpc change along the diffusion pseudotime (GAM, FDR < 0.01)",
+  "where": "STAR Methods, Diffusion pseudotime analysis of AVE and emVE cells",
+  "recomputed": "1064 of 14642 and 789 of 13579 genes with a natural cubic spline F-test (4 df) in place of R gam's loess smoother, root at the AVE end of the first diffusion component; 401 and 337 of them high-in-AVE. Within 15% of the paper: yes; the smoother and the test differ, so exact counts are not expected.",
+  "agrees": true
+ },
+ {
+  "paper_says": "14 ephrin/Eph genes at 5.5 dpc and 13 at 6.25 dpc have mean log-normalized expression above 0.5; 6 and 8 of them have a significant PCA loading (bootstrap, p < 0.01)",
+  "where": "STAR Methods, Analysis of genes in the Ephrin/Eph-signalling pathway; Fig. S5B",
+  "recomputed": "14 and 13 genes; 6 significant at 5.5 dpc (Efna3, Efna5, Efnb1, Efnb2, Epha4, Ephb3) and 8 at 6.25 dpc (Efna2, Efna3, Efna5, Efnb1, Efnb2, Epha1, Epha4, Ephb3), with each bootstrap axis reflected to the full-data axis.",
+  "agrees": true
+ },
+ {
+  "paper_says": "Unlike Cer1, Dkk1 became elevated in the anterior only at 6.25 dpc",
+  "where": "Results, AP asymmetries; Fig. S3C",
+  "recomputed": "Dkk1 AUC, AVE against emVE: 0.52 at 5.5 dpc (Wilcoxon p = 0.69) and 0.78 at 6.25 dpc (p = 2.6e-06); Cer1 0.83 and 0.90.",
+  "agrees": true
+ },
+ {
+  "paper_says": "Sema6d is expressed at higher levels in the AVE, while its receptor Plxna1 is mainly expressed in the surrounding emVE and Epi (5.5 dpc)",
+  "where": "Results, Semaphorin signaling; Fig. 6C",
+  "recomputed": "Mean ln(x + 1) at 5.5 dpc: Sema6d AVE 1.03, emVE 0.31, Epi 0.18, exVE 0.30, ExE 0.06; Plxna1 AVE 0.67, emVE 0.82, Epi 1.98, exVE 1.39, ExE 1.40.",
+  "agrees": true
+ }
+]

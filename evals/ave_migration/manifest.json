@@ -1,0 +1,21 @@
+{
+ "paper": "Thowfeequ S, Fiorentino J, Hu D, Solovey M, Ruane S, Whitehead M, Zhou F, Godwin J, Mateo-Otero Y, Vanhaesebroeck B, Scialdone A, Srinivas S. An integrated approach identifies the molecular underpinnings of murine anterior visceral endoderm migration. Developmental Cell 59, 2347-2363.e9 (2024). doi:10.1016/j.devcel.2024.05.014",
+ "evals": [
+  {
+   "id": "ave01_plate_qc",
+   "path": "evals/ave_migration/ave01_plate_qc/eval.json"
+  },
+  {
+   "id": "ave02_pseudotime_root",
+   "path": "evals/ave_migration/ave02_pseudotime_root/eval.json"
+  },
+  {
+   "id": "ave03_ephrin_bootstrap_signs",
+   "path": "evals/ave_migration/ave03_ephrin_bootstrap_signs/eval.json"
+  },
+  {
+   "id": "ave04_dkk1_timing",
+   "path": "evals/ave_migration/ave04_dkk1_timing/eval.json"
+  }
+ ]
+}
