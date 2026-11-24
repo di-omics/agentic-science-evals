@@ -21,6 +21,7 @@ analysis = [
   "leidenalg>=0.10",
   "openpyxl>=3.1",
   "pydeseq2>=0.4",
+  "rdata>=1.1",
 ]
 grade = ["latch-eval-tools==0.4.54"]
 dev = ["pytest>=8"]
