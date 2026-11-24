@@ -1,0 +1,70 @@
+{
+ "papers": [
+  {
+   "slug": "ave_migration",
+   "paper": "Thowfeequ S, Fiorentino J, Hu D, Solovey M, Ruane S, Whitehead M, Zhou F, Godwin J, Mateo-Otero Y, Vanhaesebroeck B, Scialdone A, Srinivas S. An integrated approach identifies the molecular underpinnings of murine anterior visceral endoderm migration. Developmental Cell 59, 2347-2363.e9 (2024). doi:10.1016/j.devcel.2024.05.014",
+   "evals": [
+    {
+     "id": "ave01_plate_qc",
+     "path": "evals/ave_migration/ave01_plate_qc/eval.json"
+    },
+    {
+     "id": "ave02_pseudotime_root",
+     "path": "evals/ave_migration/ave02_pseudotime_root/eval.json"
+    },
+    {
+     "id": "ave03_ephrin_bootstrap_signs",
+     "path": "evals/ave_migration/ave03_ephrin_bootstrap_signs/eval.json"
+    },
+    {
+     "id": "ave04_dkk1_timing",
+     "path": "evals/ave_migration/ave04_dkk1_timing/eval.json"
+    }
+   ]
+  },
+  {
+   "slug": "cell_competition",
+   "paper": "Lima A, Lubatti G, Burgstaller J, Hu D, et al. Cell competition acts as a purifying selection to eliminate cells with mitochondrial defects during early mouse development. Nat Metab 3, 1091-1108 (2021). doi:10.1038/s42255-021-00422-7",
+   "evals": [
+    {
+     "id": "cc01_cell_qc",
+     "path": "evals/cell_competition/cc01_cell_qc/eval.json"
+    },
+    {
+     "id": "cc02_losing_score_direction",
+     "path": "evals/cell_competition/cc02_losing_score_direction/eval.json"
+    },
+    {
+     "id": "cc03_rnr1_heteroplasmy",
+     "path": "evals/cell_competition/cc03_rnr1_heteroplasmy/eval.json"
+    },
+    {
+     "id": "cc04_resp_chain_enrichment",
+     "path": "evals/cell_competition/cc04_resp_chain_enrichment/eval.json"
+    }
+   ]
+  },
+  {
+   "slug": "apoe_microglia",
+   "paper": "Murphy KB, Hu D, Wolfs L, Rohde SK, Leguia Fauro G, Geric I, Mancuso R, De Strooper B, Marzi SJ. The APOE isoforms differentially shape the transcriptomic and epigenomic landscapes of human microglia xenografted into a mouse model of Alzheimer's disease. Nat Commun 16, 4883 (2025). doi:10.1038/s41467-025-60099-4",
+   "evals": [
+    {
+     "id": "apoe01_failed_knockouts",
+     "path": "evals/apoe_microglia/apoe01_failed_knockouts/eval.json"
+    },
+    {
+     "id": "apoe02_transcript_length_offsets",
+     "path": "evals/apoe_microglia/apoe02_transcript_length_offsets/eval.json"
+    },
+    {
+     "id": "apoe03_vdr_targets_direction",
+     "path": "evals/apoe_microglia/apoe03_vdr_targets_direction/eval.json"
+    },
+    {
+     "id": "apoe04_matched_contrast_concordance",
+     "path": "evals/apoe_microglia/apoe04_matched_contrast_concordance/eval.json"
+    }
+   ]
+  }
+ ]
+}

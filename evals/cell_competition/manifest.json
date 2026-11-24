@@ -1,0 +1,21 @@
+{
+ "paper": "Lima A, Lubatti G, Burgstaller J, Hu D, et al. Cell competition acts as a purifying selection to eliminate cells with mitochondrial defects during early mouse development. Nat Metab 3, 1091-1108 (2021). doi:10.1038/s42255-021-00422-7",
+ "evals": [
+  {
+   "id": "cc01_cell_qc",
+   "path": "evals/cell_competition/cc01_cell_qc/eval.json"
+  },
+  {
+   "id": "cc02_losing_score_direction",
+   "path": "evals/cell_competition/cc02_losing_score_direction/eval.json"
+  },
+  {
+   "id": "cc03_rnr1_heteroplasmy",
+   "path": "evals/cell_competition/cc03_rnr1_heteroplasmy/eval.json"
+  },
+  {
+   "id": "cc04_resp_chain_enrichment",
+   "path": "evals/cell_competition/cc04_resp_chain_enrichment/eval.json"
+  }
+ ]
+}

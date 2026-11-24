@@ -99,7 +99,7 @@ def build_index() -> dict:
     for slug in PAPERS:
         m = ROOT / "evals" / slug / "manifest.json"
         if m.exists():
-            papers.append({"paper": slug, **json.loads(m.read_text())})
+            papers.append({"slug": slug, **json.loads(m.read_text())})
     _dump(ROOT / "evals" / "manifest.json", {"papers": papers})
     return {"papers": len(papers), "tasks": sum(len(p["evals"]) for p in papers)}
 

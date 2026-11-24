@@ -1,0 +1,1169 @@
+{
+ "paper": "Lima A, Lubatti G, Burgstaller J, Hu D, et al. Cell competition acts as a purifying selection to eliminate cells with mitochondrial defects during early mouse development. Nat Metab 3, 1091-1108 (2021). doi:10.1038/s42255-021-00422-7",
+ "tasks": 4,
+ "controls": 22,
+ "as_expected": 22,
+ "latch_eval_tools": "0.4.54",
+ "rows": [
+  {
+   "task": "cc01_cell_qc",
+   "control": "authors_fixed_thresholds_only",
+   "kind": "reference",
+   "what": "Keep every cell that passed the fixed thresholds, as the authors did.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_cells_kept": 723,
+    "n_ci_cells_kept": 367,
+    "n_dmso_cells_kept": 356
+   },
+   "fields": {
+    "n_cells_kept": {
+     "value": 723,
+     "window": [
+      678,
+      768
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ci_cells_kept": {
+     "value": 367,
+     "window": [
+      347,
+      387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_dmso_cells_kept": {
+     "value": 356,
+     "window": [
+      321,
+      391
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc01_cell_qc",
+   "control": "high_mito_outliers_removed",
+   "kind": "variant",
+   "what": "Also remove cells more than 3 MADs above the median mitochondrial fraction.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_cells_kept": 705,
+    "n_ci_cells_kept": 355,
+    "n_dmso_cells_kept": 350
+   },
+   "fields": {
+    "n_cells_kept": {
+     "value": 705,
+     "window": [
+      678,
+      768
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ci_cells_kept": {
+     "value": 355,
+     "window": [
+      347,
+      387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_dmso_cells_kept": {
+     "value": 350,
+     "window": [
+      321,
+      391
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc01_cell_qc",
+   "control": "fixed_mito_cut_10pct",
+   "kind": "variant",
+   "what": "Also remove cells with more than 10% of reads on mitochondrial genes.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_cells_kept": 711,
+    "n_ci_cells_kept": 359,
+    "n_dmso_cells_kept": 352
+   },
+   "fields": {
+    "n_cells_kept": {
+     "value": 711,
+     "window": [
+      678,
+      768
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ci_cells_kept": {
+     "value": 359,
+     "window": [
+      347,
+      387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_dmso_cells_kept": {
+     "value": 352,
+     "window": [
+      321,
+      391
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc01_cell_qc",
+   "control": "adaptive_qc_within_treatment_5mad",
+   "kind": "variant",
+   "what": "Adaptive outlier rules (5 MADs) computed separately within each treatment group.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_cells_kept": 686,
+    "n_ci_cells_kept": 359,
+    "n_dmso_cells_kept": 327
+   },
+   "fields": {
+    "n_cells_kept": {
+     "value": 686,
+     "window": [
+      678,
+      768
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ci_cells_kept": {
+     "value": 359,
+     "window": [
+      347,
+      387
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_dmso_cells_kept": {
+     "value": 327,
+     "window": [
+      321,
+      391
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc01_cell_qc",
+   "control": "adaptive_qc_pooled_3mad",
+   "kind": "trap",
+   "what": "scater-style outlier rules at the default 3 MADs (library size, detected genes, ERCC and mitochondrial fractions) on all cells pooled.",
+   "expected_pass": false,
+   "own_pass": false,
+   "latch_pass": false,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_cells_kept": 543,
+    "n_ci_cells_kept": 241,
+    "n_dmso_cells_kept": 302
+   },
+   "fields": {
+    "n_cells_kept": {
+     "value": 543,
+     "window": [
+      678,
+      768
+     ],
+     "ok": false,
+     "gap": 135
+    },
+    "n_ci_cells_kept": {
+     "value": 241,
+     "window": [
+      347,
+      387
+     ],
+     "ok": false,
+     "gap": 106
+    },
+    "n_dmso_cells_kept": {
+     "value": 302,
+     "window": [
+      321,
+      391
+     ],
+     "ok": false,
+     "gap": 19
+    }
+   }
+  },
+  {
+   "task": "cc02_losing_score_direction",
+   "control": "destiny_style_dpt_dmso_oriented",
+   "kind": "reference",
+   "what": "Rebuild the authors' diffusion map of CI epiblast cells (Spearman distance over the lab's variable genes) and root the pseudotime at the tip whose nearest neighbours include the most cells from DMSO-treated embryos.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "rho_samm50": -0.713228607205566,
+    "rho_mt_atp6": -0.6401375945067526,
+    "rho_atf4": 0.6474886642538062,
+    "rho_sesn2": 0.5327837031003783
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.713228607205566,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.6401375945067526,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.6474886642538062,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.5327837031003783,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc02_losing_score_direction",
+   "control": "authors_published_losing_score",
+   "kind": "variant",
+   "what": "Use the authors' own losing score for these cells.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "rho_samm50": -0.7135032155909623,
+    "rho_mt_atp6": -0.639779695296251,
+    "rho_atf4": 0.6471713173208345,
+    "rho_sesn2": 0.5324914355033886
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.7135032155909623,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.639779695296251,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.6471713173208345,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.5324914355033886,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc02_losing_score_direction",
+   "control": "map_on_all_epiblast_cells",
+   "kind": "variant",
+   "what": "Build the diffusion map on all 512 epiblast cells, root it the same way, keep the CI cells.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "rho_samm50": -0.7197588356403546,
+    "rho_mt_atp6": -0.6465859057101426,
+    "rho_atf4": 0.6563431687062159,
+    "rho_sesn2": 0.5460664194992956
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.7197588356403546,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.6465859057101426,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.6563431687062159,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.5460664194992956,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc02_losing_score_direction",
+   "control": "scanpy_pca_knn_dpt",
+   "kind": "variant",
+   "what": "scanpy: PCA on the lab's variable genes, 15-nearest-neighbour graph, diffmap and dpt, rooted at the end of the first diffusion component next to DMSO cells.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "rho_samm50": -0.7240300657457583,
+    "rho_mt_atp6": -0.6111451332785369,
+    "rho_atf4": 0.6734180671034244,
+    "rho_sesn2": 0.5657696891366722
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.7240300657457583,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.6111451332785369,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.6734180671034244,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.5657696891366722,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc02_losing_score_direction",
+   "control": "scanpy_own_variable_genes",
+   "kind": "variant",
+   "what": "The same scanpy pipeline on its own 2,000 variable genes from ln(TPM + 1) of the CI cells.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "rho_samm50": -0.5794568103123823,
+    "rho_mt_atp6": -0.709733385727021,
+    "rho_atf4": 0.7967551859462061,
+    "rho_sesn2": 0.6750771870423474
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.5794568103123823,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.709733385727021,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.7967551859462061,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.6750771870423474,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc02_losing_score_direction",
+   "control": "scanpy_no_gene_selection",
+   "kind": "variant",
+   "what": "The same scanpy pipeline on ln(TPM + 1) of every gene detected in at least 10 CI cells, with no variable-gene selection.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "rho_samm50": -0.6731214224138398,
+    "rho_mt_atp6": -0.42573146575882986,
+    "rho_atf4": 0.4004810372811227,
+    "rho_sesn2": 0.29552950171733827
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": -0.6731214224138398,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_mt_atp6": {
+     "value": -0.42573146575882986,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_atf4": {
+     "value": 0.4004810372811227,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "rho_sesn2": {
+     "value": 0.29552950171733827,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc02_losing_score_direction",
+   "control": "root_at_ci_only_end",
+   "kind": "trap",
+   "what": "Root the pseudotime at the other end of the trajectory, the tip with no DMSO cell among its nearest neighbours.",
+   "expected_pass": false,
+   "own_pass": false,
+   "latch_pass": false,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "rho_samm50": 0.7135665191248423,
+    "rho_mt_atp6": 0.6387348746181606,
+    "rho_atf4": -0.645685795326694,
+    "rho_sesn2": -0.5296597650127942
+   },
+   "fields": {
+    "rho_samm50": {
+     "value": 0.7135665191248423,
+     "window": [
+      -1.013,
+      -0.413
+     ],
+     "ok": false,
+     "gap": 1.1265665191248422
+    },
+    "rho_mt_atp6": {
+     "value": 0.6387348746181606,
+     "window": [
+      -0.94,
+      -0.34
+     ],
+     "ok": false,
+     "gap": 0.9787348746181606
+    },
+    "rho_atf4": {
+     "value": -0.645685795326694,
+     "window": [
+      0.34700000000000003,
+      0.9470000000000001
+     ],
+     "ok": false,
+     "gap": 0.9926857953266941
+    },
+    "rho_sesn2": {
+     "value": -0.5296597650127942,
+     "window": [
+      0.23300000000000004,
+      0.833
+     ],
+     "ok": false,
+     "gap": 0.7626597650127942
+    }
+   }
+  },
+  {
+   "task": "cc03_rnr1_heteroplasmy",
+   "control": "all_six_covered",
+   "kind": "reference",
+   "what": "Keep cells covered by more than 50 reads at all six positions (after the paper's filter of more than 2,000 covered mtDNA positions per cell), average heteroplasmy over the six, and divide by the cells kept in each cluster.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_heteroplasmic_winner": 0.058823529411764705,
+    "frac_heteroplasmic_intermediate": 0.5434782608695652,
+    "frac_heteroplasmic_loser": 0.8727272727272727,
+    "n_cells_used": 215
+   },
+   "fields": {
+    "frac_heteroplasmic_winner": {
+     "value": 0.058823529411764705,
+     "window": [
+      0.008999999999999994,
+      0.109
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_intermediate": {
+     "value": 0.5434782608695652,
+     "window": [
+      0.48300000000000004,
+      0.603
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_loser": {
+     "value": 0.8727272727272727,
+     "window": [
+      0.793,
+      0.953
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_cells_used": {
+     "value": 215,
+     "window": [
+      195,
+      235
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc03_rnr1_heteroplasmy",
+   "control": "all_six_covered_no_cell_filter",
+   "kind": "variant",
+   "what": "The same without the per-cell filter on covered mtDNA positions.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_heteroplasmic_winner": 0.058823529411764705,
+    "frac_heteroplasmic_intermediate": 0.5434782608695652,
+    "frac_heteroplasmic_loser": 0.8727272727272727,
+    "n_cells_used": 215
+   },
+   "fields": {
+    "frac_heteroplasmic_winner": {
+     "value": 0.058823529411764705,
+     "window": [
+      0.008999999999999994,
+      0.109
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_intermediate": {
+     "value": 0.5434782608695652,
+     "window": [
+      0.48300000000000004,
+      0.603
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_loser": {
+     "value": 0.8727272727272727,
+     "window": [
+      0.793,
+      0.953
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_cells_used": {
+     "value": 215,
+     "window": [
+      195,
+      235
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc03_rnr1_heteroplasmy",
+   "control": "at_least_50_reads",
+   "kind": "variant",
+   "what": "Count a position as covered at 50 reads or more instead of more than 50.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_heteroplasmic_winner": 0.058823529411764705,
+    "frac_heteroplasmic_intermediate": 0.5483870967741935,
+    "frac_heteroplasmic_loser": 0.8727272727272727,
+    "n_cells_used": 216
+   },
+   "fields": {
+    "frac_heteroplasmic_winner": {
+     "value": 0.058823529411764705,
+     "window": [
+      0.008999999999999994,
+      0.109
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_intermediate": {
+     "value": 0.5483870967741935,
+     "window": [
+      0.48300000000000004,
+      0.603
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_loser": {
+     "value": 0.8727272727272727,
+     "window": [
+      0.793,
+      0.953
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_cells_used": {
+     "value": 216,
+     "window": [
+      195,
+      235
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc03_rnr1_heteroplasmy",
+   "control": "mean_over_covered_positions",
+   "kind": "variant",
+   "what": "Average over whichever of the six positions are covered in each cell.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_heteroplasmic_winner": 0.058823529411764705,
+    "frac_heteroplasmic_intermediate": 0.5757575757575758,
+    "frac_heteroplasmic_loser": 0.8793103448275862,
+    "n_cells_used": 225
+   },
+   "fields": {
+    "frac_heteroplasmic_winner": {
+     "value": 0.058823529411764705,
+     "window": [
+      0.008999999999999994,
+      0.109
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_intermediate": {
+     "value": 0.5757575757575758,
+     "window": [
+      0.48300000000000004,
+      0.603
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_loser": {
+     "value": 0.8793103448275862,
+     "window": [
+      0.793,
+      0.953
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_cells_used": {
+     "value": 225,
+     "window": [
+      195,
+      235
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc03_rnr1_heteroplasmy",
+   "control": "uncovered_cells_kept_in_denominator",
+   "kind": "trap",
+   "what": "Positions with 50 reads or fewer are set to missing; a cell's mean over the six is then missing, compares as False against 0.01, and the cell stays in the denominator.",
+   "expected_pass": false,
+   "own_pass": false,
+   "latch_pass": false,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_heteroplasmic_winner": 0.05128205128205128,
+    "frac_heteroplasmic_intermediate": 0.4,
+    "frac_heteroplasmic_loser": 0.676056338028169,
+    "n_cells_used": 274
+   },
+   "fields": {
+    "frac_heteroplasmic_winner": {
+     "value": 0.05128205128205128,
+     "window": [
+      0.008999999999999994,
+      0.109
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_heteroplasmic_intermediate": {
+     "value": 0.4,
+     "window": [
+      0.48300000000000004,
+      0.603
+     ],
+     "ok": false,
+     "gap": 0.08300000000000002
+    },
+    "frac_heteroplasmic_loser": {
+     "value": 0.676056338028169,
+     "window": [
+      0.793,
+      0.953
+     ],
+     "ok": false,
+     "gap": 0.11694366197183104
+    },
+    "n_cells_used": {
+     "value": 274,
+     "window": [
+      195,
+      235
+     ],
+     "ok": false,
+     "gap": 39
+    }
+   }
+  },
+  {
+   "task": "cc04_resp_chain_enrichment",
+   "control": "tested_genes_background",
+   "kind": "reference",
+   "what": "Test genes with more than 15 TPM in more than 10 cells (the paper's filter) for a linear trend on the losing score; use those tested genes as the background.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_genes_decreasing": 0.4063130294473578,
+    "frac_resp_chain_decreasing": 0.9489795918367347,
+    "fold_enrichment": 2.335587399516769,
+    "neg_log10_p": 29.91719596421191
+   },
+   "fields": {
+    "frac_genes_decreasing": {
+     "value": 0.4063130294473578,
+     "window": [
+      0.256,
+      0.556
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_resp_chain_decreasing": {
+     "value": 0.9489795918367347,
+     "window": [
+      0.869,
+      1.029
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "fold_enrichment": {
+     "value": 2.335587399516769,
+     "window": [
+      1.14,
+      3.54
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neg_log10_p": {
+     "value": 29.91719596421191,
+     "window": [
+      14.899999999999999,
+      44.9
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc04_resp_chain_enrichment",
+   "control": "spearman_trend_test",
+   "kind": "variant",
+   "what": "Same genes and background, Spearman correlation test instead of the linear trend.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_genes_decreasing": 0.3937071399757967,
+    "frac_resp_chain_decreasing": 0.9081632653061225,
+    "fold_enrichment": 2.306697474071596,
+    "neg_log10_p": 25.992955943909685
+   },
+   "fields": {
+    "frac_genes_decreasing": {
+     "value": 0.3937071399757967,
+     "window": [
+      0.256,
+      0.556
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_resp_chain_decreasing": {
+     "value": 0.9081632653061225,
+     "window": [
+      0.869,
+      1.029
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "fold_enrichment": {
+     "value": 2.306697474071596,
+     "window": [
+      1.14,
+      3.54
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neg_log10_p": {
+     "value": 25.992955943909685,
+     "window": [
+      14.899999999999999,
+      44.9
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc04_resp_chain_enrichment",
+   "control": "lighter_expression_filter",
+   "kind": "variant",
+   "what": "Test genes above 1 TPM in at least 10% of cells; background = those genes.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_genes_decreasing": 0.3630271974773354,
+    "frac_resp_chain_decreasing": 0.9484536082474226,
+    "fold_enrichment": 2.6126241087119557,
+    "neg_log10_p": 33.880779232535865
+   },
+   "fields": {
+    "frac_genes_decreasing": {
+     "value": 0.3630271974773354,
+     "window": [
+      0.256,
+      0.556
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_resp_chain_decreasing": {
+     "value": 0.9484536082474226,
+     "window": [
+      0.869,
+      1.029
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "fold_enrichment": {
+     "value": 2.6126241087119557,
+     "window": [
+      1.14,
+      3.54
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neg_log10_p": {
+     "value": 33.880779232535865,
+     "window": [
+      14.899999999999999,
+      44.9
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc04_resp_chain_enrichment",
+   "control": "stricter_expression_filter",
+   "kind": "variant",
+   "what": "Test genes with mean TPM of at least 10; background = those genes.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_genes_decreasing": 0.5187347015627942,
+    "frac_resp_chain_decreasing": 0.9574468085106383,
+    "fold_enrichment": 1.8457350272232305,
+    "neg_log10_p": 20.70077825419502
+   },
+   "fields": {
+    "frac_genes_decreasing": {
+     "value": 0.5187347015627942,
+     "window": [
+      0.256,
+      0.556
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "frac_resp_chain_decreasing": {
+     "value": 0.9574468085106383,
+     "window": [
+      0.869,
+      1.029
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "fold_enrichment": {
+     "value": 1.8457350272232305,
+     "window": [
+      1.14,
+      3.54
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neg_log10_p": {
+     "value": 20.70077825419502,
+     "window": [
+      14.899999999999999,
+      44.9
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "cc04_resp_chain_enrichment",
+   "control": "whole_genome_background",
+   "kind": "trap",
+   "what": "Same decreasing genes, but the background is every gene in the annotation, as web enrichment tools assume by default.",
+   "expected_pass": false,
+   "own_pass": false,
+   "latch_pass": false,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "frac_genes_decreasing": 0.0742830540037244,
+    "frac_resp_chain_decreasing": 0.788135593220339,
+    "fold_enrichment": 10.609897557265532,
+    "neg_log10_p": 80.83553757435442
+   },
+   "fields": {
+    "frac_genes_decreasing": {
+     "value": 0.0742830540037244,
+     "window": [
+      0.256,
+      0.556
+     ],
+     "ok": false,
+     "gap": 0.1817169459962756
+    },
+    "frac_resp_chain_decreasing": {
+     "value": 0.788135593220339,
+     "window": [
+      0.869,
+      1.029
+     ],
+     "ok": false,
+     "gap": 0.080864406779661
+    },
+    "fold_enrichment": {
+     "value": 10.609897557265532,
+     "window": [
+      1.14,
+      3.54
+     ],
+     "ok": false,
+     "gap": 7.069897557265532
+    },
+    "neg_log10_p": {
+     "value": 80.83553757435442,
+     "window": [
+      14.899999999999999,
+      44.9
+     ],
+     "ok": false,
+     "gap": 35.93553757435442
+    }
+   }
+  }
+ ]
+}
