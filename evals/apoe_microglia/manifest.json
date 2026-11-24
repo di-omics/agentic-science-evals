@@ -1,0 +1,21 @@
+{
+ "paper": "Murphy KB, Hu D, Wolfs L, Rohde SK, Leguia Fauro G, Geric I, Mancuso R, De Strooper B, Marzi SJ. The APOE isoforms differentially shape the transcriptomic and epigenomic landscapes of human microglia xenografted into a mouse model of Alzheimer's disease. Nat Commun 16, 4883 (2025). doi:10.1038/s41467-025-60099-4",
+ "evals": [
+  {
+   "id": "apoe01_failed_knockouts",
+   "path": "evals/apoe_microglia/apoe01_failed_knockouts/eval.json"
+  },
+  {
+   "id": "apoe02_transcript_length_offsets",
+   "path": "evals/apoe_microglia/apoe02_transcript_length_offsets/eval.json"
+  },
+  {
+   "id": "apoe03_vdr_targets_direction",
+   "path": "evals/apoe_microglia/apoe03_vdr_targets_direction/eval.json"
+  },
+  {
+   "id": "apoe04_matched_contrast_concordance",
+   "path": "evals/apoe_microglia/apoe04_matched_contrast_concordance/eval.json"
+  }
+ ]
+}

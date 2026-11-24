@@ -21,7 +21,7 @@ a plausible wrong analysis must fail.
 | CUT&Tag recovers up to half of ENCODE ChIP-seq histone acetylation peaks. Nat Commun 2025 | Joint first author; performed the laboratory experiments with a co-author | GEO GSE286492 | 6 tasks and a pilot, in [epigenomics-evals](https://github.com/di-omics/epigenomics-evals) |
 | An integrated approach identifies the molecular underpinnings of murine anterior visceral endoderm migration. Dev Cell 2024 | Sample collections for the transcriptomics | ArrayExpress E-MTAB-9645 | 4 tasks: [ave_migration](src/science_evals/papers/ave_migration/README.md) |
 | Cell competition acts as a purifying selection to eliminate cells with mitochondrial defects during early mouse development. Nat Metab 2021 | Embryo dissections, treatments and cell dissociation before single-cell RNA-seq | see the paper's folder | [cell_competition](src/science_evals/papers/cell_competition/README.md), in progress |
-| The APOE isoforms differentially shape the transcriptomic and epigenomic landscapes of human microglia xenografted into a mouse model of Alzheimer's disease. Nat Commun 2025 | Second author | GEO GSE271384, GSE271385 | [apoe_microglia](src/science_evals/papers/apoe_microglia/README.md), in progress |
+| The APOE isoforms differentially shape the transcriptomic and epigenomic landscapes of human microglia xenografted into a mouse model of Alzheimer's disease. Nat Commun 2025 | Second author; performed experiments with 4 co-authors | GEO GSE271384, GSE271385 | 4 tasks: [apoe_microglia](src/science_evals/papers/apoe_microglia/README.md) |
 
 ## Why the controls
 

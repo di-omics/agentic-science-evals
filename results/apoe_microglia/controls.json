@@ -1,0 +1,1413 @@
+{
+ "paper": "Murphy KB, Hu D, Wolfs L, Rohde SK, Leguia Fauro G, Geric I, Mancuso R, De Strooper B, Marzi SJ. The APOE isoforms differentially shape the transcriptomic and epigenomic landscapes of human microglia xenografted into a mouse model of Alzheimer's disease. Nat Commun 16, 4883 (2025). doi:10.1038/s41467-025-60099-4",
+ "tasks": 4,
+ "controls": 20,
+ "as_expected": 20,
+ "latch_eval_tools": "0.4.54",
+ "rows": [
+  {
+   "task": "apoe01_failed_knockouts",
+   "control": "reference",
+   "kind": "reference",
+   "what": "Drop the knockout grafts whose APOE level is at least a quarter of the APOE3 median, then DESeq2 with the tximport lengths as offsets, BH over all genes.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 338,
+    "n_higher_in_ko": 133,
+    "apoe_log2fc": -4.0771027188339
+   },
+   "fields": {
+    "n_deg": {
+     "value": 338,
+     "window": [
+      293,
+      413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_ko": {
+     "value": 133,
+     "window": [
+      108,
+      168
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -4.0771027188339,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe01_failed_knockouts",
+   "control": "plain_counts",
+   "kind": "variant",
+   "what": "Same samples; counts without the transcript lengths.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 333,
+    "n_higher_in_ko": 136,
+    "apoe_log2fc": -4.210113196254464
+   },
+   "fields": {
+    "n_deg": {
+     "value": 333,
+     "window": [
+      293,
+      413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_ko": {
+     "value": 136,
+     "window": [
+      108,
+      168
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -4.210113196254464,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe01_failed_knockouts",
+   "control": "length_scaled_counts",
+   "kind": "variant",
+   "what": "Same samples; lengths divided out of the counts first.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 340,
+    "n_higher_in_ko": 133,
+    "apoe_log2fc": -4.077528343102927
+   },
+   "fields": {
+    "n_deg": {
+     "value": 340,
+     "window": [
+      293,
+      413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_ko": {
+     "value": 133,
+     "window": [
+      108,
+      168
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -4.077528343102927,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe01_failed_knockouts",
+   "control": "independent_filtering",
+   "kind": "variant",
+   "what": "Same samples and offsets; DESeq2's padj with independent filtering instead of BH over all genes.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 401,
+    "n_higher_in_ko": 164,
+    "apoe_log2fc": -4.0771027188339
+   },
+   "fields": {
+    "n_deg": {
+     "value": 401,
+     "window": [
+      293,
+      413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_ko": {
+     "value": 164,
+     "window": [
+      108,
+      168
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -4.0771027188339,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe01_failed_knockouts",
+   "control": "pydeseq2",
+   "kind": "variant",
+   "what": "Same samples; the pydeseq2 package on the counts.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 319,
+    "n_higher_in_ko": 131,
+    "apoe_log2fc": -4.210171533
+   },
+   "fields": {
+    "n_deg": {
+     "value": 319,
+     "window": [
+      293,
+      413
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_ko": {
+     "value": 131,
+     "window": [
+      108,
+      168
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -4.210171533,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe01_failed_knockouts",
+   "control": "all_knockout_grafts",
+   "kind": "trap",
+   "what": "Keep all five APOE-KO samples, two of which express APOE; otherwise the reference analysis.",
+   "expected_pass": false,
+   "own_pass": false,
+   "latch_pass": false,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 458,
+    "n_higher_in_ko": 231,
+    "apoe_log2fc": -2.1338322017664297
+   },
+   "fields": {
+    "n_deg": {
+     "value": 458,
+     "window": [
+      293,
+      413
+     ],
+     "ok": false,
+     "gap": 45
+    },
+    "n_higher_in_ko": {
+     "value": 231,
+     "window": [
+      108,
+      168
+     ],
+     "ok": false,
+     "gap": 63
+    },
+    "apoe_log2fc": {
+     "value": -2.1338322017664297,
+     "window": [
+      -4.477,
+      -3.677
+     ],
+     "ok": false,
+     "gap": 1.5431677982335703
+    }
+   }
+  },
+  {
+   "task": "apoe02_transcript_length_offsets",
+   "control": "reference",
+   "kind": "reference",
+   "what": "APOE2, APOE3 and APOE4 samples; DESeq2 with the tximport lengths as offsets; BH over all genes.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 270,
+    "n_higher_in_apoe4": 153,
+    "apoe_log2fc": -0.46343342190905584
+   },
+   "fields": {
+    "n_deg": {
+     "value": 270,
+     "window": [
+      220,
+      360
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_apoe4": {
+     "value": 153,
+     "window": [
+      123,
+      203
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -0.46343342190905584,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe02_transcript_length_offsets",
+   "control": "length_scaled_counts",
+   "kind": "variant",
+   "what": "Lengths divided out of the counts, then DESeq2 with size factors.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 273,
+    "n_higher_in_apoe4": 154,
+    "apoe_log2fc": -0.4635885140886761
+   },
+   "fields": {
+    "n_deg": {
+     "value": 273,
+     "window": [
+      220,
+      360
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_apoe4": {
+     "value": 154,
+     "window": [
+      123,
+      203
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -0.4635885140886761,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe02_transcript_length_offsets",
+   "control": "pydeseq2_length_scaled",
+   "kind": "variant",
+   "what": "Length-scaled counts with the pydeseq2 package.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 254,
+    "n_higher_in_apoe4": 142,
+    "apoe_log2fc": -0.4635884672
+   },
+   "fields": {
+    "n_deg": {
+     "value": 254,
+     "window": [
+      220,
+      360
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_apoe4": {
+     "value": 142,
+     "window": [
+      123,
+      203
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -0.4635884672,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe02_transcript_length_offsets",
+   "control": "independent_filtering",
+   "kind": "variant",
+   "what": "Offsets; DESeq2's padj with independent filtering.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 320,
+    "n_higher_in_apoe4": 173,
+    "apoe_log2fc": -0.46343342190905584
+   },
+   "fields": {
+    "n_deg": {
+     "value": 320,
+     "window": [
+      220,
+      360
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_apoe4": {
+     "value": 173,
+     "window": [
+      123,
+      203
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -0.46343342190905584,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe02_transcript_length_offsets",
+   "control": "paper_model",
+   "kind": "variant",
+   "what": "The paper's model: offsets, all samples except the two knockout grafts that express APOE.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 333,
+    "n_higher_in_apoe4": 179,
+    "apoe_log2fc": -0.46328937158371586
+   },
+   "fields": {
+    "n_deg": {
+     "value": 333,
+     "window": [
+      220,
+      360
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_higher_in_apoe4": {
+     "value": 179,
+     "window": [
+      123,
+      203
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "apoe_log2fc": {
+     "value": -0.46328937158371586,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe02_transcript_length_offsets",
+   "control": "counts_without_lengths",
+   "kind": "trap",
+   "what": "The gene-level counts tested as plain read counts, size factors only.",
+   "expected_pass": false,
+   "own_pass": false,
+   "latch_pass": false,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_deg": 1220,
+    "n_higher_in_apoe4": 628,
+    "apoe_log2fc": -0.725533670314586
+   },
+   "fields": {
+    "n_deg": {
+     "value": 1220,
+     "window": [
+      220,
+      360
+     ],
+     "ok": false,
+     "gap": 860
+    },
+    "n_higher_in_apoe4": {
+     "value": 628,
+     "window": [
+      123,
+      203
+     ],
+     "ok": false,
+     "gap": 425
+    },
+    "apoe_log2fc": {
+     "value": -0.725533670314586,
+     "window": [
+      -0.583,
+      -0.343
+     ],
+     "ok": false,
+     "gap": 0.14253367031458608
+    }
+   }
+  },
+  {
+   "task": "apoe03_vdr_targets_direction",
+   "control": "reference",
+   "kind": "reference",
+   "what": "Genes with fdr < 0.05 and a negative log2 fold change in the APOE4 against APOE2 sheet; unique symbols; hypergeometric test inside the sheet's symbols.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_higher_in_apoe2": 890,
+    "n_vdr_targets": 82,
+    "vdr_targets_higher_in_apoe2": [
+     "ABCC1",
+     "ACO2",
+     "ADAMTS10",
+     "ADGRE5",
+     "ARHGEF10L",
+     "BCL9L",
+     "CHCHD10",
+     "CMTM7",
+     "COX4I1",
+     "CSF3R",
+     "CTSB",
+     "CTSD",
+     "DNAJC4",
+     "DNASE2",
+     "EFNB1",
+     "ELL",
+     "EPB41L1",
+     "FAM20C",
+     "FAM53B",
+     "FGFR1",
+     "FTL",
+     "FUCA1",
+     "GIPC3",
+     "GLIPR1",
+     "GM2A",
+     "GNPDA1",
+     "GPI",
+     "HBEGF",
+     "HIGD2A",
+     "HPCAL1",
+     "IFNGR2",
+     "ITGB2",
+     "KLF11",
+     "LAMC1",
+     "LAMP1",
+     "LGALS9",
+     "LGI2",
+     "LILRB4",
+     "LRCH4",
+     "MARCO",
+     "MDH2",
+     "MFSD12",
+     "MGLL",
+     "MRPL4",
+     "MYO1F",
+     "MYO9B",
+     "NCF2",
+     "NCF4",
+     "NCOR2",
+     "NDUFS7",
+     "NFAM1",
+     "NFKBIA",
+     "NHSL2",
+     "NINJ1",
+     "PABPC1",
+     "PIEZO1",
+     "PILRA",
+     "PLTP",
+     "PRKACA",
+     "RBM47",
+     "RIN2",
+     "RIN3",
+     "SASH3",
+     "SCARB1",
+     "SEMA4B",
+     "SHE",
+     "SIPA1",
+     "SLC27A1",
+     "SLC37A2",
+     "SMAP2",
+     "SMPDL3A",
+     "TEX264",
+     "THBD",
+     "THEMIS2",
+     "TMC6",
+     "TMEM127",
+     "TMEM205",
+     "UAP1L1",
+     "VRK3",
+     "XXYLT1",
+     "XYLT1",
+     "ZMIZ1"
+    ],
+    "neglog10_p": 10.443054248228288
+   },
+   "fields": {
+    "n_higher_in_apoe2": {
+     "value": 890,
+     "window": [
+      875,
+      905
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_vdr_targets": {
+     "value": 82,
+     "window": [
+      79,
+      85
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neglog10_p": {
+     "value": 10.443054248228288,
+     "window": [
+      7.9399999999999995,
+      11.44
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "vdr_targets_higher_in_apoe2": {
+     "jaccard": 1.0,
+     "threshold": 0.9,
+     "ok": true
+    }
+   }
+  },
+  {
+   "task": "apoe03_vdr_targets_direction",
+   "control": "rows_not_symbols",
+   "kind": "variant",
+   "what": "Count table rows instead of unique symbols.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_higher_in_apoe2": 891,
+    "n_vdr_targets": 82,
+    "vdr_targets_higher_in_apoe2": [
+     "ABCC1",
+     "ACO2",
+     "ADAMTS10",
+     "ADGRE5",
+     "ARHGEF10L",
+     "BCL9L",
+     "CHCHD10",
+     "CMTM7",
+     "COX4I1",
+     "CSF3R",
+     "CTSB",
+     "CTSD",
+     "DNAJC4",
+     "DNASE2",
+     "EFNB1",
+     "ELL",
+     "EPB41L1",
+     "FAM20C",
+     "FAM53B",
+     "FGFR1",
+     "FTL",
+     "FUCA1",
+     "GIPC3",
+     "GLIPR1",
+     "GM2A",
+     "GNPDA1",
+     "GPI",
+     "HBEGF",
+     "HIGD2A",
+     "HPCAL1",
+     "IFNGR2",
+     "ITGB2",
+     "KLF11",
+     "LAMC1",
+     "LAMP1",
+     "LGALS9",
+     "LGI2",
+     "LILRB4",
+     "LRCH4",
+     "MARCO",
+     "MDH2",
+     "MFSD12",
+     "MGLL",
+     "MRPL4",
+     "MYO1F",
+     "MYO9B",
+     "NCF2",
+     "NCF4",
+     "NCOR2",
+     "NDUFS7",
+     "NFAM1",
+     "NFKBIA",
+     "NHSL2",
+     "NINJ1",
+     "PABPC1",
+     "PIEZO1",
+     "PILRA",
+     "PLTP",
+     "PRKACA",
+     "RBM47",
+     "RIN2",
+     "RIN3",
+     "SASH3",
+     "SCARB1",
+     "SEMA4B",
+     "SHE",
+     "SIPA1",
+     "SLC27A1",
+     "SLC37A2",
+     "SMAP2",
+     "SMPDL3A",
+     "TEX264",
+     "THBD",
+     "THEMIS2",
+     "TMC6",
+     "TMEM127",
+     "TMEM205",
+     "UAP1L1",
+     "VRK3",
+     "XXYLT1",
+     "XYLT1",
+     "ZMIZ1"
+    ],
+    "neglog10_p": 10.443054248228288
+   },
+   "fields": {
+    "n_higher_in_apoe2": {
+     "value": 891,
+     "window": [
+      875,
+      905
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_vdr_targets": {
+     "value": 82,
+     "window": [
+      79,
+      85
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neglog10_p": {
+     "value": 10.443054248228288,
+     "window": [
+      7.9399999999999995,
+      11.44
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "vdr_targets_higher_in_apoe2": {
+     "jaccard": 1.0,
+     "threshold": 0.9,
+     "ok": true
+    }
+   }
+  },
+  {
+   "task": "apoe03_vdr_targets_direction",
+   "control": "authors_universe",
+   "kind": "variant",
+   "what": "The authors' code: all rows as the universe and every VDR target counted, inside the sheet or not.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_higher_in_apoe2": 891,
+    "n_vdr_targets": 82,
+    "vdr_targets_higher_in_apoe2": [
+     "ABCC1",
+     "ACO2",
+     "ADAMTS10",
+     "ADGRE5",
+     "ARHGEF10L",
+     "BCL9L",
+     "CHCHD10",
+     "CMTM7",
+     "COX4I1",
+     "CSF3R",
+     "CTSB",
+     "CTSD",
+     "DNAJC4",
+     "DNASE2",
+     "EFNB1",
+     "ELL",
+     "EPB41L1",
+     "FAM20C",
+     "FAM53B",
+     "FGFR1",
+     "FTL",
+     "FUCA1",
+     "GIPC3",
+     "GLIPR1",
+     "GM2A",
+     "GNPDA1",
+     "GPI",
+     "HBEGF",
+     "HIGD2A",
+     "HPCAL1",
+     "IFNGR2",
+     "ITGB2",
+     "KLF11",
+     "LAMC1",
+     "LAMP1",
+     "LGALS9",
+     "LGI2",
+     "LILRB4",
+     "LRCH4",
+     "MARCO",
+     "MDH2",
+     "MFSD12",
+     "MGLL",
+     "MRPL4",
+     "MYO1F",
+     "MYO9B",
+     "NCF2",
+     "NCF4",
+     "NCOR2",
+     "NDUFS7",
+     "NFAM1",
+     "NFKBIA",
+     "NHSL2",
+     "NINJ1",
+     "PABPC1",
+     "PIEZO1",
+     "PILRA",
+     "PLTP",
+     "PRKACA",
+     "RBM47",
+     "RIN2",
+     "RIN3",
+     "SASH3",
+     "SCARB1",
+     "SEMA4B",
+     "SHE",
+     "SIPA1",
+     "SLC27A1",
+     "SLC37A2",
+     "SMAP2",
+     "SMPDL3A",
+     "TEX264",
+     "THBD",
+     "THEMIS2",
+     "TMC6",
+     "TMEM127",
+     "TMEM205",
+     "UAP1L1",
+     "VRK3",
+     "XXYLT1",
+     "XYLT1",
+     "ZMIZ1"
+    ],
+    "neglog10_p": 8.293503347776136
+   },
+   "fields": {
+    "n_higher_in_apoe2": {
+     "value": 891,
+     "window": [
+      875,
+      905
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_vdr_targets": {
+     "value": 82,
+     "window": [
+      79,
+      85
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "neglog10_p": {
+     "value": 8.293503347776136,
+     "window": [
+      7.9399999999999995,
+      11.44
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "vdr_targets_higher_in_apoe2": {
+     "jaccard": 1.0,
+     "threshold": 0.9,
+     "ok": true
+    }
+   }
+  },
+  {
+   "task": "apoe03_vdr_targets_direction",
+   "control": "reversed_direction",
+   "kind": "trap",
+   "what": "Take a positive log2 fold change in the APOE4 against APOE2 sheet as higher in APOE2.",
+   "expected_pass": false,
+   "own_pass": false,
+   "latch_pass": false,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "n_higher_in_apoe2": 735,
+    "n_vdr_targets": 30,
+    "vdr_targets_higher_in_apoe2": [
+     "ACVR1B",
+     "AGTPBP1",
+     "ARHGAP12",
+     "BASP1",
+     "C2CD5",
+     "CARD11",
+     "CCDC50",
+     "CHSY1",
+     "CTPS1",
+     "ELMO1",
+     "GLS",
+     "GOLGA4",
+     "HNRNPU",
+     "IBTK",
+     "IDH1",
+     "LRIG1",
+     "MGAT4A",
+     "MIR646HG",
+     "MRPS25",
+     "MYOF",
+     "NRIP1",
+     "NUP210",
+     "PIK3AP1",
+     "PPP1R16B",
+     "RASSF4",
+     "SOAT1",
+     "ST3GAL1",
+     "STK4",
+     "TRAF3IP3",
+     "ZNF44"
+    ],
+    "neglog10_p": 0.1965609319586862
+   },
+   "fields": {
+    "n_higher_in_apoe2": {
+     "value": 735,
+     "window": [
+      875,
+      905
+     ],
+     "ok": false,
+     "gap": 140
+    },
+    "n_vdr_targets": {
+     "value": 30,
+     "window": [
+      79,
+      85
+     ],
+     "ok": false,
+     "gap": 49
+    },
+    "neglog10_p": {
+     "value": 0.1965609319586862,
+     "window": [
+      7.9399999999999995,
+      11.44
+     ],
+     "ok": false,
+     "gap": 7.743439068041313
+    },
+    "vdr_targets_higher_in_apoe2": {
+     "jaccard": 0.0,
+     "threshold": 0.9,
+     "ok": false
+    }
+   }
+  },
+  {
+   "task": "apoe04_matched_contrast_concordance",
+   "control": "reference",
+   "kind": "reference",
+   "what": "For each comparison, median promoter log2 fold change per gene from the same comparison; Pearson r over DEGs with a promoter peak; genes matched by Entrez ID.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "r_e2_vs_e3": 0.43510185950294256,
+    "r_e4_vs_e3": 0.6398220585988901,
+    "r_e4_vs_e2": 0.4458000770499416,
+    "r_ko_vs_e3": 0.6272894675426482,
+    "n_e2_vs_e3": 444,
+    "n_e4_vs_e3": 308,
+    "n_e4_vs_e2": 1548,
+    "n_ko_vs_e3": 316
+   },
+   "fields": {
+    "r_e2_vs_e3": {
+     "value": 0.43510185950294256,
+     "window": [
+      0.4001,
+      0.47009999999999996
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e3": {
+     "value": 0.6398220585988901,
+     "window": [
+      0.6048,
+      0.6748000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e2": {
+     "value": 0.4458000770499416,
+     "window": [
+      0.41079999999999994,
+      0.4808
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_ko_vs_e3": {
+     "value": 0.6272894675426482,
+     "window": [
+      0.5922999999999999,
+      0.6623
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e2_vs_e3": {
+     "value": 444,
+     "window": [
+      434,
+      454
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e3": {
+     "value": 308,
+     "window": [
+      298,
+      318
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e2": {
+     "value": 1548,
+     "window": [
+      1533,
+      1563
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ko_vs_e3": {
+     "value": 316,
+     "window": [
+      306,
+      326
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe04_matched_contrast_concordance",
+   "control": "mean_per_gene",
+   "kind": "variant",
+   "what": "Mean instead of median of a gene's promoter peaks.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "r_e2_vs_e3": 0.46282443055334044,
+    "r_e4_vs_e3": 0.634394464919871,
+    "r_e4_vs_e2": 0.43694657265573306,
+    "r_ko_vs_e3": 0.6194208201604907,
+    "n_e2_vs_e3": 444,
+    "n_e4_vs_e3": 308,
+    "n_e4_vs_e2": 1548,
+    "n_ko_vs_e3": 316
+   },
+   "fields": {
+    "r_e2_vs_e3": {
+     "value": 0.46282443055334044,
+     "window": [
+      0.4001,
+      0.47009999999999996
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e3": {
+     "value": 0.634394464919871,
+     "window": [
+      0.6048,
+      0.6748000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e2": {
+     "value": 0.43694657265573306,
+     "window": [
+      0.41079999999999994,
+      0.4808
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_ko_vs_e3": {
+     "value": 0.6194208201604907,
+     "window": [
+      0.5922999999999999,
+      0.6623
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e2_vs_e3": {
+     "value": 444,
+     "window": [
+      434,
+      454
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e3": {
+     "value": 308,
+     "window": [
+      298,
+      318
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e2": {
+     "value": 1548,
+     "window": [
+      1533,
+      1563
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ko_vs_e3": {
+     "value": 316,
+     "window": [
+      306,
+      326
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe04_matched_contrast_concordance",
+   "control": "match_by_symbol",
+   "kind": "variant",
+   "what": "Genes matched by symbol instead of Entrez ID.",
+   "expected_pass": true,
+   "own_pass": true,
+   "latch_pass": true,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "r_e2_vs_e3": 0.43444570777509456,
+    "r_e4_vs_e3": 0.6401707484633126,
+    "r_e4_vs_e2": 0.43868743180156927,
+    "r_ko_vs_e3": 0.6303591580737297,
+    "n_e2_vs_e3": 442,
+    "n_e4_vs_e3": 306,
+    "n_e4_vs_e2": 1538,
+    "n_ko_vs_e3": 313
+   },
+   "fields": {
+    "r_e2_vs_e3": {
+     "value": 0.43444570777509456,
+     "window": [
+      0.4001,
+      0.47009999999999996
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e3": {
+     "value": 0.6401707484633126,
+     "window": [
+      0.6048,
+      0.6748000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e2": {
+     "value": 0.43868743180156927,
+     "window": [
+      0.41079999999999994,
+      0.4808
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_ko_vs_e3": {
+     "value": 0.6303591580737297,
+     "window": [
+      0.5922999999999999,
+      0.6623
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e2_vs_e3": {
+     "value": 442,
+     "window": [
+      434,
+      454
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e3": {
+     "value": 306,
+     "window": [
+      298,
+      318
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e2": {
+     "value": 1538,
+     "window": [
+      1533,
+      1563
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ko_vs_e3": {
+     "value": 313,
+     "window": [
+      306,
+      326
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  },
+  {
+   "task": "apoe04_matched_contrast_concordance",
+   "control": "pooled_comparisons",
+   "kind": "trap",
+   "what": "Each gene's promoter summary taken over the rows of all four comparisons at once.",
+   "expected_pass": false,
+   "own_pass": false,
+   "latch_pass": false,
+   "graders_agree": true,
+   "as_expected": true,
+   "answer": {
+    "r_e2_vs_e3": 0.14260618728322344,
+    "r_e4_vs_e3": 0.6060728298142556,
+    "r_e4_vs_e2": 0.39157660145486295,
+    "r_ko_vs_e3": 0.5054744011987689,
+    "n_e2_vs_e3": 444,
+    "n_e4_vs_e3": 308,
+    "n_e4_vs_e2": 1548,
+    "n_ko_vs_e3": 316
+   },
+   "fields": {
+    "r_e2_vs_e3": {
+     "value": 0.14260618728322344,
+     "window": [
+      0.4001,
+      0.47009999999999996
+     ],
+     "ok": false,
+     "gap": 0.25749381271677657
+    },
+    "r_e4_vs_e3": {
+     "value": 0.6060728298142556,
+     "window": [
+      0.6048,
+      0.6748000000000001
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "r_e4_vs_e2": {
+     "value": 0.39157660145486295,
+     "window": [
+      0.41079999999999994,
+      0.4808
+     ],
+     "ok": false,
+     "gap": 0.019223398545136994
+    },
+    "r_ko_vs_e3": {
+     "value": 0.5054744011987689,
+     "window": [
+      0.5922999999999999,
+      0.6623
+     ],
+     "ok": false,
+     "gap": 0.08682559880123109
+    },
+    "n_e2_vs_e3": {
+     "value": 444,
+     "window": [
+      434,
+      454
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e3": {
+     "value": 308,
+     "window": [
+      298,
+      318
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_e4_vs_e2": {
+     "value": 1548,
+     "window": [
+      1533,
+      1563
+     ],
+     "ok": true,
+     "gap": 0.0
+    },
+    "n_ko_vs_e3": {
+     "value": 316,
+     "window": [
+      306,
+      326
+     ],
+     "ok": true,
+     "gap": 0.0
+    }
+   }
+  }
+ ]
+}
